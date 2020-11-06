@@ -1,20 +1,24 @@
-<?php 
+<?php require '../vendor/autoload.php';
 
-//dans le fichier public le serveur pointe sur ce fichier
-
-require '../vendor/autoload.php';
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 
 $router = new AltoRouter();
 
 dd($router);
 
-$router->map(method'GET', route'/home', function() {
-    require __DIR__ , '/../views/base.php';
+
+$whoops = new Run;
+$whoops->pushHandler(new PrettyPageHandler);
+$whoops->register();
+
+
+
+$router->map('GET|POST', '/home', function () {
+    require __DIR__ . '/../views/home.php';
 });
 
 $match = $router->match();
-
-dd($match);
-$match['target']();
+$match["target"]();
 
 ?>

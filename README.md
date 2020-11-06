@@ -40,3 +40,5 @@ viewx : les vues (en html uniquement si possible, peut-être un peu de php)
 vendor : jamais sur github car trop lourd - utiliser composer install
 
 git bash puis cd explorer puis composer install
+
+pour le serveur : php -S 127.0.0.1:8000 -t public
