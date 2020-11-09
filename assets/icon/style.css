@@ -1,1 +1,55 @@
-"href="../assets/css/style.css"
+/*"href="../assets/css/style.css"
+
+fichier css bootstrap + ajouts personnels
+ */
+
+/*!
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+.bg-bleu {
+    background-color: #28abb9!important;
+}
+
+.bg-rouge {
+    background-color: #bb2b18!important;
+}
+
+.bg-vert {
+    background-color: #b6eb7a!important;
+}
+
+.bg-jaune {
+    background-color: #ffc93c!important;
+}
+
+.bg-violet {
+    background-color: #8675a9!important;
+}
+
+.bg-rose {
+    background-color: #d9adad!important;
+}
+
+.bg-orange {
+    background-color: #f08a5d!important;
+}
+
+.bg-marron {
+    background-color: #7d5a5a!important;
+}
+
+.bg-turquoise {
+    background-color: #01c5c4!important;
+}
+
+.bg-grenade {
+    background-color: #900c3f!important;
+}
+
+.bg-beige {
+    background-color: #eedad1!important;
+}

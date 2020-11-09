@@ -1,5 +1,7 @@
 <?php
 
+//indexView
+
 <?php
 
 use App\Connection;
@@ -15,8 +17,7 @@ if (isset($_POST["submit"])) {
 ?>
 
 
-
-<?php require 'block/navbar.html' ?>
+<?php require 'block/template.html' ?>
 
 <div class="mt-5 container col-md-6">
     <form action="" method="POST" enctype="multipart/form-data">
@@ -26,6 +27,6 @@ if (isset($_POST["submit"])) {
 </div>
 
 
-<?php require 'block/footer.html' ?>
+<?php
 
 ?>
