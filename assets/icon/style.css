@@ -75,5 +75,56 @@ fichier css bootstrap + ajouts personnels
     background-color: #F6BE9A;
 }
 
-/*theme2*/
+/*theme2 https://coolors.co/d7f2ba-bde4a8-9cc69b-79b4a9-676f54*/
+.bg-th2-1 {
+    background-color: #D7F2BA;
+}
+.bg-th2-2 {
+     background-color: #BDE4A8;
+ }
+.bg-th2-3 {
+      bac-kground-color: #9CC69B;
+  }
+.bg-th2-4 {
+       background-color: #79B4A9;
+   }
+.bg-th2-5 {
+        background-color: #676F54;
+    }
 
+/*theme3 https://coolors.co/071e22-1d7874-679289-f4c095-ee2e31*/
+
+.bg-th3-1 {
+    background-color: #071E22;
+}
+
+.bg-th3-2 {
+    background-color: #1D7874;
+}
+.bg-th3-3 {
+    background-color: #679289;
+}
+.bg-th3-4 {
+    background-color: #F4C095;
+}
+.bg-th3-5 {
+    background-color: #EE2E31;
+}
+
+/*theme4 https://coolors.co/37392e-19647e-28afb0-ddcecd-eee5e5*/
+
+.bg-th4-1 {
+    background-color: #37392E;
+}
+.bg-th4-2 {
+    background-color: #19647E;
+}
+.bg-th4-3 {
+    background-color: #28AFB0;
+}
+.bg-th4-4 {
+    background-color: #DDCECD;
+}
+.bg-th4-5 {
+    background-color: #EEE5E5;
+}
