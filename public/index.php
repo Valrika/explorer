@@ -5,7 +5,7 @@ use Whoops\Run;
 
 $router = new AltoRouter();
 
-dd($router);
+
 
 
 $whoops = new Run;

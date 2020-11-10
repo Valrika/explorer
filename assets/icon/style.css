@@ -10,6 +10,7 @@ fichier css bootstrap + ajouts personnels
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+/*background-colors*/
 .bg-bleu {
     background-color: #28abb9!important;
 }
@@ -53,3 +54,26 @@ fichier css bootstrap + ajouts personnels
 .bg-beige {
     background-color: #eedad1!important;
 }
+
+/*theme1*/
+.bg-th1-1 {
+    background-color: #0C1618;
+}
+.bg-th1-2 {
+    background-color: #004643;
+}
+
+.bg-th1-3 {
+    background-color: #FAF4D3;
+}
+
+.bg-th1-4 {
+    background-color: #D1AC00;
+}
+
+.bg-th1-5 {
+    background-color: #F6BE9A;
+}
+
+/*theme2*/
+

@@ -13,11 +13,16 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
         <link rel="stylesheet" href="../assets/icon/style.css" />
     </head>
 
-    <body>
 
-    <nav class="navbar navbar-light bg-info">
+    <!--navbar sur le côté à gauche-->
+    <nav class="navbar fixed-top navbar-light bg-info">
         <a href="#" class="navbar-brand">File-Explorer</a>
     </nav>
+
+
+    <body>
+
+
 
         <?= $content ?>
     </body>
