@@ -1,6 +1,8 @@
 <?php
 
-//$pdo = (new Connection())->getPdo();
+use App\Connection;
+
+$pdo = (new Connection())->getPdo();
 
 $title = "mon site";
 $content = "contenu du site";
