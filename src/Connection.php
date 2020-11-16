@@ -4,15 +4,20 @@ namespace App;
 
 use PDO;
 
-class Connection
+
+class  Connection
 {
 
+    /**
+     * @return PDO
+     */
     public function getPdo()
     {
-        return new PDO('mysql:dbname=pure;host=127.0.0.1', 'root', 'toortoor', [
+        return new PDO('mysql:dbname=utilisateur;host=127.0.0.1', 'root', 'toortoor', [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]);
+
     }
+
 }
 
-?>

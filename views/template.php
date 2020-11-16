@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <!--page depuis laquelle on affiche toute la structure de la page, vise à remplacer le header et le footer

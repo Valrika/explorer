@@ -7,6 +7,7 @@ $pdo = (new Connection())->getPdo();
 $title = "mon site";
 $content = "content du site";
 require("template.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +33,7 @@ require("template.php");
                 <h3 class="text-center">Inscription</h3>
                 <br>
                 <div class="form-group">
-                    <label for="username">nom</label>
+                    <label for="username">username</label>
                     <input type="text" name="username"  class="form-control-lg">
                 </div>
 
@@ -54,7 +55,7 @@ require("template.php");
                 <div class="form-group">
                     <button type="submit" name="signup-btn" class="btn btn-light btn-md">Inscription</button>
                 </div>
-                <p class="text-center">Déjà membre ? <a href="login.php">Connectez-vous</a></p>
+                <p class="text-center">Déjà membre ? <a href="inscription.php">Connectez-vous</a></p>
             </form>
 
         </div>
