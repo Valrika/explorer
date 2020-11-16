@@ -1,23 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e011946e-846c-4e5c-9a57-84d271fec321" name="Default Changelist" comment="-m &quot;changes&quot;">
-      <change afterPath="$PROJECT_DIR$/src/Data.php" afterDir="false" />
+    <list default="true" id="68c42178-7d07-4310-93a3-e8b08c2322b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/auth/connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/auth/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/explorateur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/explorer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/explorer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/authController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/icon/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connect.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/explorateur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/sql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deconnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/auth/connect.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/auth/inscription.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/connect.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/deconnexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/views/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +69,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kE9lUpdayqKjHdiSUfYaTd7lYx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,6 +82,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -70,20 +92,17 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\acs\Desktop\explorer\public" />
-      <recent name="C:\Users\acs\Desktop\explorer\views" />
       <recent name="C:\Users\acs\Desktop\explorer\views\auth" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e011946e-846c-4e5c-9a57-84d271fec321" name="Default Changelist" comment="" />
+      <changelist id="68c42178-7d07-4310-93a3-e8b08c2322b7" name="Default Changelist" comment="" />
       <created>1605255035355</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -91,14 +110,8 @@
       <workItem from="1605255039247" duration="3978000" />
       <workItem from="1605259534086" duration="2453000" />
       <workItem from="1605262416532" duration="9484000" />
-      <workItem from="1605285110819" duration="352000" />
-      <workItem from="1605367501833" duration="4042000" />
-      <workItem from="1605372783413" duration="15814000" />
-      <workItem from="1605389490694" duration="5665000" />
-      <workItem from="1605432968938" duration="10967000" />
-      <workItem from="1605465019535" duration="8169000" />
-      <workItem from="1605511986445" duration="4504000" />
-      <workItem from="1605516750808" duration="15264000" />
+      <workItem from="1605536363134" duration="127000" />
+      <workItem from="1605536511930" duration="206000" />
     </task>
     <task id="LOCAL-00001" summary="-m &quot;changes&quot;">
       <created>1605283894497</created>
@@ -107,21 +120,7 @@
       <option name="project" value="LOCAL" />
       <updated>1605283894497</updated>
     </task>
-    <task id="LOCAL-00002" summary="-m &quot;changes&quot;">
-      <created>1605517476789</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1605517476789</updated>
-    </task>
-    <task id="LOCAL-00003" summary="-m &quot;changes&quot;">
-      <created>1605517730184</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1605517730184</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,5 +141,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-m &quot;changes&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="-m &quot;changes&quot;" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1605536486312">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605536486312" />
   </component>
 </project>
