@@ -19,6 +19,11 @@ $router->map('GET|POST', '/home', function () {
 });
 
 $match = $router->match();
-$match["target"]();
 
+if( is_array($match) && is_callable( $match['target'] ) ) {
+    call_user_func_array( $match['target'], $match['params'] );
+} else {
+    // no route was matched
+    header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
+}
 ?>

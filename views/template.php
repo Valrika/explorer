@@ -14,46 +14,25 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
     </head>
 
 
-    <!--navbar sur le côté à gauche-->
-
-    <div id="wrapper" class="active">
-        <!-- Sidebar -->
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul id="sidebar_menu" class="sidebar-nav">
-                <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+    <div id="" class="wrapper active">
+        <div id="" class="sidebar-wrapper">
+            <ul id="" class="sidebar-nav sidebar_menu">
+                <li class="sidebar-brand"><a id="" href="#">Menu</a></li>
             </ul>
-            <ul class="sidebar-nav" id="sidebar">
-                <li><a>Utilisateur<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-                <ul class="sidebar-nav" id="sidebar">
-                    <li><a>Documents<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-                    <li><a>Partage<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+            <ul id="" class="sidebar-nav sidebar" >
+                <li><a href="#">Utilisateur</a></li>
+                    <li><a href="#">Documents</a></li>
+                    <li><a href="#">Partage</a></li>
+            </ul>
         </div>
 
-        <!--
-   <ul class="nav flex-column">
-       <li class="nav-item">
-           <a class="nav-link active" href="#">Mes documents</a>
-       </li>
-
-       <div class="collapse"
-       <li class="nav-item">
-           <a class="nav-link active" href="#">Utilisateurs</a>
-       </li>
-
-
-       <li class="nav-item">
-           <a class="nav-link active" href="#">Partage</a>
-       </li>
-       <li>
-           <a href="#" class="nav-link active">Se connecter</a>
-       </li>
-   </ul>
-   -->
-
-    <body>
+    <body class ="bg-th1-3">
+        <div >
 
         <?= $content ?>
+
+        </div>
+
     </body>
 
 
