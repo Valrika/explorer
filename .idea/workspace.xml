@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,24 +22,25 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c42178-7d07-4310-93a3-e8b08c2322b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/auth/connect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/auth/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/connect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/explorateur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="68c42178-7d07-4310-93a3-e8b08c2322b7" name="Default Changelist" comment="-m &quot;changes&quot;">
+      <change afterPath="$PROJECT_DIR$/controllers/c-inscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/c-login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataLogin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/explorer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/explorer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/authController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/sql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deconnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/deconnexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/views/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +96,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -112,6 +117,17 @@
       <workItem from="1605262416532" duration="9484000" />
       <workItem from="1605536363134" duration="127000" />
       <workItem from="1605536511930" duration="206000" />
+      <workItem from="1605545734460" duration="838000" />
+      <workItem from="1605546795945" duration="890000" />
+      <workItem from="1605599825541" duration="23795000" />
+      <workItem from="1605630395826" duration="454000" />
+      <workItem from="1605685469463" duration="6243000" />
+      <workItem from="1605692423083" duration="25936000" />
+      <workItem from="1605789395717" duration="220000" />
+      <workItem from="1605789617869" duration="144000" />
+      <workItem from="1605789787326" duration="325000" />
+      <workItem from="1605790115779" duration="289000" />
+      <workItem from="1605790450879" duration="28633000" />
     </task>
     <task id="LOCAL-00001" summary="-m &quot;changes&quot;">
       <created>1605283894497</created>
@@ -142,10 +158,8 @@
     <MESSAGE value="-m &quot;changes&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="-m &quot;changes&quot;" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1605536486312">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1605536486312" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
