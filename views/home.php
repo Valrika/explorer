@@ -4,13 +4,32 @@ use App\Connection;
 
 $pdo = (new Connection())->getPdo();
 
-$title = "mon site";
-$content = "content du site";
-require("template.php");
+$title = "Explorateur de fichier Valrika";
+
+ob_start();
 ?>
 
-    <!--se connecter et ou créer un compte en haut à droite-->
+    <div class="container w-50 h-50">
+        <form>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="entrez votre email" placeholder="Email">
+                    </div>
 
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+                    </div>
+                    <button type="submit" class="btn btn-info">Se connecter</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--se connecter et ou créer un compte en haut à droite-->
+    <!--
     <head>
         <title>Accueil</title>
     </head>
@@ -20,7 +39,7 @@ require("template.php");
     <div class="container">
         <div class="row">
             <div class="col-md-3 offset-md-4 form-div">
-                <!-- Formulaire de connexion fait -->
+                Formulaire de connexion fait
 <br>
                 <div class="alert alert-succes">
                   Vous êtes maintentenant connecté !
@@ -39,10 +58,10 @@ require("template.php");
             </div>
         </div>
     </div>
-
-
 </body>
-
+-->
 <?php
+$content = ob_get_clean();
 
+require("template.php");
 ?>
