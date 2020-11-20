@@ -10,7 +10,7 @@ $pdo = (new Connection())->getPdo();
 $errors = array();
 $username = "";
 $pwd = "";
-require_once '../views/template.php';
+//require_once '../views/template.php';
 
 
 
@@ -19,20 +19,22 @@ $sth->bindParam(':username', $username);
 $sth->execute();
 $result = $sth->fetchAll();
 
-/*if (isset($_POST["submit"])) {
+if (isset($_POST["submit"])) {
     $username = $_POST["username"];
     $pwd = $_POST["pwd"]; {
-        header('location: /c-login');
-    }*/
 
-        if (isset($_POST['username']) && !empty($_POST['password'])) {
+    }
+
+    }
+
+        //if (isset($_POST['username']) && !empty($_POST['password'])) {
 
            /* function validate($data){
                 $data=trim($data);
                 $data=stripcslashes($data);
                 $data=htmlspecialchars($data);
                 return $data;
-            }*/
+            }
 
             $username= ($_POST['username']);
             $pwd= ($_POST['pwd']);
@@ -54,7 +56,7 @@ $result = $sth->fetchAll();
 
 
 
-}
+}*/
 
 
 
@@ -105,3 +107,4 @@ $result = $sth->fetchAll();
 
 
 }*/
+
