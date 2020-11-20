@@ -7,13 +7,11 @@ $pdo = (new Connection())->getPdo();
 $title = "mon site";
 $content = "content du site";
 require("template.php");
-
-
 ?>
 
     <!--se connecter et ou créer un compte en haut à droite-->
 
-   <!-- <head>
+    <head>
         <title>Accueil</title>
     </head>
 
@@ -22,7 +20,7 @@ require("template.php");
     <div class="container">
         <div class="row">
             <div class="col-md-3 offset-md-4 form-div">
-                <!-- Formulaire de connexion fait
+                <!-- Formulaire de connexion fait -->
 <br>
                 <div class="alert alert-succes">
                   Vous êtes maintentenant connecté !
@@ -43,7 +41,7 @@ require("template.php");
     </div>
 
 
-</body> -->
+</body>
 
 <?php
 

@@ -12,22 +12,30 @@ fichier css bootstrap + ajouts personnels
 
 /*background-colors*/
 
-.row{
-    margin-left:0px;
-    margin-right:0px;
+body {
+    background-image: url(../img/storage.jpg);
+    background-attachment: fixed;
+
 }
 
-#wrapper {
-    padding-left: 70px;
+.opacite {
+    background-color: #FFFFFF99;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.navbar{
+    z-index: 1;
+}
+
+.wrapper {
     transition: all .4s ease 0s;
-    height: 100%
+    height: 100%;
 }
 
-#sidebar-wrapper {
-    margin-left: -150px;
-    left: 70px;
-    width: 150px;
-    background: #222;
+.sidebar-wrapper {
+    width: 14rem;
+    background: #0C1618;
     position: fixed;
     height: 100%;
     z-index: 10000;
@@ -35,140 +43,36 @@ fichier css bootstrap + ajouts personnels
 }
 
 .sidebar-nav {
-    display: block;
-    float: left;
-    width: 150px;
     list-style: none;
-    margin: 0;
-    padding: 0;
-}
-#page-content-wrapper {
-    padding-left: 0;
-    margin-left: 0;
-    width: 100%;
-    height: auto;
-}
-#wrapper.active {
-    padding-left: 150px;
-}
-#wrapper.active #sidebar-wrapper {
-    left: 150px;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-#page-content-wrapper {
-    width: 100%;
+.sidebar-brand {
+    height: 1rem;
+    font-size: 1rem;
 }
 
-#sidebar_menu li a, .sidebar-nav li a {
+.sidebar_menu li a, .sidebar-nav li a {
     color: #999;
     display: block;
-    float: left;
-    text-decoration: none;
-    width: 150px;
-    background: #252525;
-    border-top: 1px solid #373737;
-    border-bottom: 1px solid #1A1A1A;
-    -webkit-transition: background .5s;
-    -moz-transition: background .5s;
-    -o-transition: background .5s;
-    -ms-transition: background .5s;
-    transition: background .5s;
-}
-.sidebar_name {
-    padding-top: 25px;
-    color: #fff;
-    opacity: .7;
+    background: #0C1618;
+    border-top: 0.1rem solid #16262b;
+    border-bottom: 0.1rem solid #080d11;
+
+
 }
 
 .sidebar-nav li {
-    line-height: 40px;
-    text-indent: 20px;
-}
-
-.sidebar-nav li a {
-    color: #999999;
-    display: block;
-    text-decoration: none;
+    line-height: 2.5rem;
+    text-indent: 1.25rem;
 }
 
 .sidebar-nav li a:hover {
-    color: #fff;
-    background: rgba(255,255,255,0.2);
-    text-decoration: none;
+    background: rgba(3,48,46,0.3);
 }
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
-}
-
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    line-height: 60px;
-    font-size: 18px;
-}
-
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
-}
-
-
-.vertical {
-    height: 20em;
-    line-height:20em;
-    white-space:nowrap;
-}!important
-
-.bg-bleu {
-    background-color: #28abb9!important;
-}
-
-.bg-rouge {
-    background-color: #bb2b18!important;
-}
-
-.bg-vert {
-    background-color: #b6eb7a!important;
-}
-
-.bg-jaune {
-    background-color: #ffc93c!important;
-}
-
-.bg-violet {
-    background-color: #8675a9!important;
-}
-
-.bg-rose {
-    background-color: #d9adad!important;
-}
-
-.bg-orange {
-    background-color: #f08a5d!important;
-}
-
-.bg-marron {
-    background-color: #7d5a5a!important;
-}
-
-.bg-turquoise {
-    background-color: #01c5c4!important;
-}
-
-.bg-grenade {
-    background-color: #900c3f!important;
-}
-
-.bg-beige {
-    background-color: #eedad1!important;
-}
-
-/*theme1*/
+/*theme1 https://coolors.co/0c1618-004643-faf4d3-d1ac00-f6be9a*/
 .bg-th1-1 {
     background-color: #0C1618;
 }
@@ -176,8 +80,12 @@ fichier css bootstrap + ajouts personnels
     background-color: #004643;
 }
 
+.bg-th1-2-bis {
+    background-color: #012d2b;
+}
+
 .bg-th1-3 {
-    background-color: #FAF4D3;
+    background-color: #f6f4f1;
 }
 
 .bg-th1-4 {
@@ -185,61 +93,5 @@ fichier css bootstrap + ajouts personnels
 }
 
 .bg-th1-5 {
-    background-color: #F6BE9A;
+    background-color: #ffc5a0;
 }
-
-/*theme2 https://coolors.co/d7f2ba-bde4a8-9cc69b-79b4a9-676f54*/
-.bg-th2-1 {
-    background-color: #D7F2BA;
-}
-.bg-th2-2 {
-     background-color: #BDE4A8;
- }
-.bg-th2-3 {
-      background-color: #9CC69B;
-  }
-.bg-th2-4 {
-       background-color: #79B4A9;
-   }
-.bg-th2-5 {
-        background-color: #676F54;
-    }
-
-/*theme3 https://coolors.co/071e22-1d7874-679289-f4c095-ee2e31*/
-
-.bg-th3-1 {
-    background-color: #071E22;
-}
-
-.bg-th3-2 {
-    background-color: #1D7874;
-}
-.bg-th3-3 {
-    background-color: #679289;
-}
-.bg-th3-4 {
-    background-color: #F4C095;
-}
-.bg-th3-5 {
-    background-color: #EE2E31;
-}
-
-/*theme4 https://coolors.co/37392e-19647e-28afb0-ddcecd-eee5e5*/
-
-.bg-th4-1 {
-    background-color: #37392E;
-}
-.bg-th4-2 {
-    background-color: #19647E;
-}
-.bg-th4-3 {
-    background-color: #28AFB0;
-}
-.bg-th4-4 {
-    background-color: #DDCECD;
-}
-.bg-th4-5 {
-    background-color: #EEE5E5;
-}
-
-
