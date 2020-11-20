@@ -6,7 +6,10 @@
 les variables seront définies en fonction de la page dans laquelle le template s'affiche
 exemple et explications ici :
 https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-php/4682286-creer-un-template-de-page-->
-
+<?php
+$title = "titre";
+$content = "";
+?>
 <html lang="fr">
     <head>
         <meta charset="utf-8"/>
@@ -31,7 +34,11 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
                     <li><a>Documents<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
                     <li><a>Partage<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
         </div>
-
+<ul class="sidebar-nav">
+    <?php //if (est_connecte()): ?>
+    <li class="nav-item"><a href="/logout">Se déconnecter</a> </li>
+    <?//php endif ?>
+</ul>
         <!--
    <ul class="nav flex-column">
        <li class="nav-item">
