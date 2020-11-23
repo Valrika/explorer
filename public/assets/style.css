@@ -12,8 +12,17 @@ fichier css bootstrap + ajouts personnels
 
 /*background-colors*/
 
+
+/*
+texte recherche en couleur
+changer couleur des liens
+ne pas souligner les liens, seulement hover
+ajouter les icones
+ajouter des fondus sur chaque changement de page sans que le template ne bouge
+*/
+
 body {
-    background-image: url(../img/storage.jpg);
+    background-image: url(../assets/img/storage.jpg);
     background-attachment: fixed;
 
 }
@@ -24,8 +33,13 @@ body {
     min-width: 100vw;
 }
 
-.navbar{
-    z-index: 1;
+.nav {
+    border-bottom: 0.1rem solid #080d11;
+}
+
+.btn-research {
+    text-decoration: #004643;
+    box-shadow: 0 0 0 .1rem rgba(0, 70, 67, .9);
 }
 
 .wrapper {
@@ -35,7 +49,7 @@ body {
 
 .sidebar-wrapper {
     width: 14rem;
-    background: #0C1618;
+    background: #011618;
     position: fixed;
     height: 100%;
     z-index: 10000;
@@ -56,9 +70,10 @@ body {
 .sidebar_menu li a, .sidebar-nav li a {
     color: #999;
     display: block;
-    background: #0C1618;
+    background: #011618;
     border-top: 0.1rem solid #16262b;
     border-bottom: 0.1rem solid #080d11;
+    transition: background-color 1.5s;
 
 
 }

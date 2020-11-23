@@ -5,11 +5,16 @@ use App\Connection;
 $pdo = (new Connection())->getPdo();
 
 $title = "mon site";
-$content = "content du site";
-require("template.php");
+ob_start();
+session_start();
 ?>
 
-    <!--se connecter et ou créer un compte en haut à droite-->
+    <!--page d'accueil par défaut si pas de connexion
+
+    sur chaque page du site : tester si déjà connecté
+
+    si oui -> home_after login
+    si non -> home-->
 
     <head>
         <title>Accueil</title>
@@ -20,22 +25,13 @@ require("template.php");
     <div class="container">
         <div class="row">
             <div class="col-md-3 offset-md-4 form-div">
-                <!-- Formulaire de connexion fait -->
-<br>
-                <div class="alert alert-succes">
-                  Vous êtes maintentenant connecté !
-                </div>
+
+                <!--TODO personnaliser le message d'accueil et le titre-->
 
                 <h3>Bienvenue, Valérie </h3>
 
-                <a href="#">Déconnexion</a>
-
                 <div class="alert alert-warning">
-                    Connectez-vous à votre messagerie et cliquez sur le
-                    lien de vérification que nous vous avons envoyé à
-                    <strong>valerie_ekoume@hotmail.com</strong>
-
-                    <button class="btn btn-block btn-md btn-light">Email vérifié</button>
+                    Vous pouvez maintenant organiser et télécharger vos fichiers.
             </div>
         </div>
     </div>
@@ -45,4 +41,6 @@ require("template.php");
 
 <?php
 
+$content = ob_get_clean();
+require("template.php");
 ?>
