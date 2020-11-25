@@ -22,19 +22,30 @@ session_start();
 
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 offset-md-4 form-div">
 
-                <!--TODO personnaliser le message d'accueil et le titre-->
+<div class="page-container">
 
-                <h3>Bienvenue, Valérie </h3>
+    <form action="#" method="POST">
 
-                <div class="alert alert-warning">
-                    Vous pouvez maintenant organiser et télécharger vos fichiers.
-            </div>
-        </div>
-    </div>
+        <h1>Inscription</h1>
+
+        <label for="name">Comment voulez-vous qu'on vous appelle ?</label>
+        <input type="text" name="name" class="Name" placeholder="nom ou pseudonyme">
+
+        <label for="email">Email address</label>
+        <input type="text" name="email" class="Email" placeholder="email">
+        <small id="email" class="form-text text-muted">Nous ne vendrons jamais vos données</small>
+
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" class="Address" placeholder="mot de passe">
+
+        <label for="passwordConfirm">Confirmez votre mot de passe</label>
+        <input type="password" name="password" class="Address" placeholder="confirmer le mot de passe">
+
+        <button class="btn btn-info btn-margin" type="submit" value="Add" name="submit">Envoyer</button>
+
+    </form>
+</div>
 
 
 </body>

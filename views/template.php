@@ -25,6 +25,12 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
 
     <body>
 
+    <!--TODO créer une boucle pour tester si l'utilisateur est connecté ou non-->
+
+    <!--Si utilisateur PAS connecté :-->
+
+    <!--Si utilisateur connecté :-->
+
     <nav class="nav nav-pills nav-fill bg-th1-1">
         <div>
             <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

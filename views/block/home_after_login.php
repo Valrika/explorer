@@ -19,15 +19,15 @@ ob_start();
 
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 offset-md-4 form-div">
-                <!-- affichage de home si utilisateur connecté -->
+    <<div class="col-md-3 offset-md-4 form-div">
+
+                <!--TODO personnaliser le message d'accueil et le titre-->
 
                 <h3>Bienvenue, Valérie </h3>
 
+                <div class="alert alert-warning">
+                    Vous pouvez maintenant organiser et télécharger vos fichiers.
             </div>
-        </div>
     </div>
 
 
