@@ -1,3 +1,11 @@
+<?php
+
+$title = "mon site";
+$content = "content du site";
+require_once '../controllers/functions.php';
+require_once '../controllers/c-login.php';
+?>
+
 <!DOCTYPE html>
 
 <!--page depuis laquelle on affiche toute la structure de la page, vise à remplacer le header et le footer
@@ -20,7 +28,8 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
                 <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
             </svg>
 
-            <a class="nav-link nav-item" href="#">Se connecter</a>
+            <a class="nav-link nav-item" href="">Se connecter</a>
+
 
             <form class="nav-item form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="que cherchez-vous ?" aria-label="search">
@@ -38,6 +47,13 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
                             <li><a href="#">Utilisateur</a></li>
                             <li><a href="#">Documents</a></li>
                             <li><a href="#">Partage</a></li>
+                            <li><a href="../views/inscription.php">S'incrire</a></li>
+                        </ul>
+                        <ul class="sidebar-nav sidebar">
+
+                                <li class="nav-item"><a href="#">Se Déconnecter</a></li>
+
+
                         </ul>
                     </div>
             </div>
