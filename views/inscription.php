@@ -1,58 +1,56 @@
 <?php
-session_
 
-        /*if (empty($username) || empty($email) || empty($password)) {
-            $status="Tous les champs sont requis";
-        } else {
-            if (strlen($username) >= 255 || !preg_match("/^[a-zA-Z-'\s]+$/", $username)) {
-                $status="Entrez un identifiant valide svp";
-            } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $status="Entrez un email valid svp";
-            }
-        }*/
+use App\Connection;
 
-}
+$pdo = (new Connection())->getPdo();
+
+$title = "mon site";
+$content = "content du site";
+require("template.php");
+require("../controllers/c-inscription.php")
+
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-<link rel="stylesheet" href="assets/icon/style.css" />
+
 <head>
     <meta charset="UTF-8">
     <!-- Boostrap css -->
 
-    <title>Inscription</title>
+    <title>Register</title>
 </head>
 
 <body>
+    <?php  (count($errors) > 0); ?>
+    <div class="alert alert-danger">
+        <?php /*foreach ($errors as $error) */?>
+        <li><?php /*echo $errors;*/ ?>></li>
+    </div>
 
-<div class="container w-50 h-50">
-    <form action="" method="POST">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label for="text">Identifiant</label>
-                    <input type="text" class="form-control" name="username" id="username" aria-describedby="entrez votre identifiant" placeholder="Identifiant">
-                        </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                                </div>
-                        <div class="form-group">
-                    <label for="password">Mot de passe</label>
-                    <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe">
-                </div>
-                <button type="submit" name="submit" class="btn btn-info">Se connecter</button>
+    <div class="page-container">
 
-                <div class="form-status">
+        <form action="#" method="POST">
 
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
+            <h1>Inscription</h1>
 
+            <label for="name">Comment voulez-vous qu'on vous appelle ?</label>
+            <input type="text" name="name" value="<?php /*echo $username; */?>" class="Name" placeholder="nom ou pseudonyme">
+
+            <label for="email">Email address</label>
+            <input type="text" name="email" value="<?php /*echo $email; */?>" class="Email" placeholder="email">
+            <small id="email" class="form-text text-muted">Nous ne vendrons jamais vos données</small>
+
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" class="Address" placeholder="mot de passe">
+
+            <label for="passwordConfirm">Confirmez votre mot de passe</label>
+            <input type="password" name="password" class="Address" placeholder="confirmer le mot de passe">
+
+            <button class="btn btn-info btn-margin" type="submit" value="Add" name="submit">Envoyer</button>
+
+        </form>
+    </div>
 
 
 </body>

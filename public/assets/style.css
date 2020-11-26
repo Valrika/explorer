@@ -1,0 +1,160 @@
+/*"href="../assets/css/style.css"
+
+fichier css bootstrap + ajouts personnels
+ */
+
+/*!
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+/*background-colors*/
+
+
+/*
+texte recherche en couleur
+changer couleur des liens
+ne pas souligner les liens, seulement hover
+ajouter les icones
+ajouter des fondus sur chaque changement de page sans que le template ne bouge
+*/
+
+body {
+    background-image: url(../assets/img/storage.jpg);
+    background-attachment: fixed;
+
+}
+
+.opacite {
+    background-color: #FFFFFF99;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.container {
+    background-color: #247e6d;
+}
+
+.nav {
+    border-bottom: 0.1rem solid #080d11;
+    height: 4rem;
+}
+
+.btn-research {
+    box-shadow: 0 0 0 .1rem rgba(0, 70, 67, .9);
+}
+
+/*
+.btn-info {
+color: rgba(0, 70, 67, .9)
+}
+*/
+
+.wrapper {
+    transition: all .4s ease 0s;
+    height: 100%;
+}
+
+
+.page-container {
+    margin: 120px auto 0 auto;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow:0 1px 4px rgba(0,0,0,.2);
+    text-align:center;
+}
+
+input {
+    width:30rem;
+    height:3rem;
+    margin-top:12rem;
+    background:rgba(00,46,43,.15);
+    text-align:center;
+    border-radius:6px;
+    color: #1a1a1a;
+}
+
+.placeholder
+{
+    color: #247e6d;
+}
+
+.btn-margin {
+    margin-top: 1rem;
+}
+
+form {
+    position:relative;
+    width:30rem;
+    margin:5rem auto 0 auto;
+    text-align:center;
+}
+
+.sidebar-wrapper {
+    width: 14rem;
+    background: #011618;
+    position: fixed;
+    height: 100%;
+    z-index: 10000;
+    transition: all .4s ease 0s;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-brand {
+    height: 1rem;
+    font-size: 1rem;
+}
+
+.sidebar_menu li a, .sidebar-nav li a {
+    color: #999;
+    display: block;
+    background: #011618;
+    border-top: 0.1rem solid #16262b;
+    border-bottom: 0.1rem solid #080d11;
+    transition: background-color 1.5s;
+
+
+}
+
+.sidebar-nav li {
+    line-height: 2.5rem;
+    text-indent: 1.25rem;
+}
+
+.sidebar-nav li a:hover {
+    background: rgba(3,48,46,0.3);
+}
+
+/*theme1 https://coolors.co/0c1618-004643-faf4d3-d1ac00-f6be9a*/
+.bg-th1-1 {
+    background-color: #0C1618;
+}
+.bg-th1-2 {
+    background-color: #004643;
+}
+
+.bg-th1-2-bis {
+    background-color: #012d2b;
+}
+
+.bg-th1-3 {
+    background-color: #f6f4f1;
+}
+
+.bg-th1-4 {
+    background-color: #d1ac00;
+}
+
+.bg-th1-5 {
+    background-color: #ffc5a0;
+}
