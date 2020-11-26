@@ -28,25 +28,29 @@ require("../controllers/c-inscription.php")
         <li><?php /*echo $errors;*/ ?>></li>
     </div>
 
+    <div class="page-container">
 
-<section class="signup-form">
-    <h3 class="text-center">Inscription</h3>
-                <div class="signup-form-form">
+        <form action="#" method="POST">
 
-                    <form action="../views/inscription.php" method="post">
+            <h1>Inscription</h1>
 
-                        <input type="text" name="uid" value="<?php /*echo $username; */?>" placeholder="Username">
-                        <input type="text" name="email" value="<?php /*echo $email; */?>" placeholder="Email">
-                        <input type="text" name="role"  placeholder="role">
-                        <input type="password" name="password" placeholder="Password" "> <!-- Dans type on écrit password pour que l'utilisateur puisse le taper en toute discrétion -->
-                        <input type="password" name="pwdrepeat" placeholder="Repeat password">
-                        <button type="submit" name="submit">inscription</button>
-                    </form>
-                </div>
+            <label for="name">Comment voulez-vous qu'on vous appelle ?</label>
+            <input type="text" name="name" value="<?php /*echo $username; */?>" class="Name" placeholder="nom ou pseudonyme">
 
+            <label for="email">Email address</label>
+            <input type="text" name="email" value="<?php /*echo $email; */?>" class="Email" placeholder="email">
+            <small id="email" class="form-text text-muted">Nous ne vendrons jamais vos données</small>
 
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" class="Address" placeholder="mot de passe">
 
-</section>
+            <label for="passwordConfirm">Confirmez votre mot de passe</label>
+            <input type="password" name="password" class="Address" placeholder="confirmer le mot de passe">
+
+            <button class="btn btn-info btn-margin" type="submit" value="Add" name="submit">Envoyer</button>
+
+        </form>
+    </div>
 
 
 </body>
