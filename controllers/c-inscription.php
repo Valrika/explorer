@@ -1,23 +1,73 @@
 <?php
-session_start();
-use App\Connection;
 
+use App\Connection;
 $pdo = (new Connection())->getPdo();
 
+$dbHost = "127.0.0.1";
+$dbname = "utilisateur";
+$dbPassword = "toortoor";
+$dbUser = "root";
+
+try {
+    $dsn = "mysql:host=" . $dbHost . ";dbname=" . $dbname;
+    $pdo = new PDO($dsn, $dbUser, $dbPassword);
+    echo "Connection sucessful";
+}catch (PDOException $e) {
+    echo "DB Connection Failed: " . $e->getMessage();
+}
+
+
+$statut ="";
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $username=$_POST["username"];
+    $email=$_POST["email"];
+    $password=$_POST["password"];
+
+    if (empty($username)|| empty($email) || empty($password)) {
+        $status = "Tous les champs sont requis";
+
+    }else {
+        if (strlen($username) >= 255 || !preg_match("/^[a-zA-Z-'\s]+$/", $username)) {
+           $status ="Entrez un identifiant valide svp";
+
+        }else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+         $status = "Entrez un email valid svp";
+        } else {
+            $sql = "INSERT  INTO user (username, email, password)  VALUES(:username, :email, :password)";
+
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(['name' => $username , 'email' => $email, 'password' => $password]);
+
+            $status = "Vos informations ont été enregistrées";
+            $username = "";
+            $email = "";
+            $password = "";
+
+        }
+    }
+
+
+/*if (isset($_POST["submit"])) {
+
+    $username=$_POST["username"];
+    $email=$_POST["email"];
+    $password=$_POST["password"];*/
+
+
+
+}
+
+
+
+
 //initialisation de la variable $errors pour qu'elle soit dispo globalement
-$errors = array();
+/*$errors = array();
 $username = "";
 $email = "";
 
 
 // Si le user click sur le button submit
-    if (isset($_POST["submit"])) {
 
-    $username=$_POST["uid"];
-    $email=$_POST["email"];
-    $role=$_POST["role"];
-    $pwd=$_POST["password"];
-    $pwdRepeat=$_POST["pwdrepeat"];
 
     //Validation on s'assure que le user utilise les valeurs requise pour la validation
     if (empty($username) !== false) {

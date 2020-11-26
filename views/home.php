@@ -1,48 +1,43 @@
 <?php
-
+//if (session_status() === PHP_SESSION_NONE) {
+    //session_start();
+//}
 use App\Connection;
 
-$pdo = (new Connection())->getPdo();
 
-$title = "mon site";
-$content = "content du site";
-require("template.php");
+
+
+
+$title = "Explorateur de fichier Valrika";
+
+ob_start();
 ?>
 
-    <!--se connecter et ou créer un compte en haut à droite-->
 
-    <head>
-        <title>Accueil</title>
-    </head>
 
-<body>
+    <div class="container w-50 h-50">
+        <form action="">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="text">Identifiant</label>
+                        <input type="text" class="form-control" id="username" aria-describedby="entrez votre email" placeholder="Identifiant">
+                    </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 offset-md-4 form-div">
-                <!-- Formulaire de connexion fait -->
-<br>
-                <div class="alert alert-succes">
-                  Vous êtes maintentenant connecté !
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+                    </div>
+                    <button type="submit" class="btn btn-info">Se connecter</button>
                 </div>
-
-                <h3>Bienvenue, Valérie </h3>
-
-                <a href="#">Déconnexion</a>
-
-                <div class="alert alert-warning">
-                    Connectez-vous à votre messagerie et cliquez sur le
-                    lien de vérification que nous vous avons envoyé à
-                    <strong>valerie_ekoume@hotmail.com</strong>
-
-                    <button class="btn btn-block btn-md btn-light">Email vérifié</button>
             </div>
-        </div>
+        </form>
     </div>
 
 
-</body>
-
 <?php
+$content = ob_get_clean();
+
+require("template.php");
 
 ?>
