@@ -19,8 +19,9 @@ ajouter des fondus sur chaque changement de page sans que le template ne bouge
 */
 
 body {
-    background-image: url(../assets/img/storage.jpg);
+    background-image: url(../img/storage.jpg);
     background-attachment: fixed;
+    text-decoration-color: #247e6d;!important;
 
 }
 
@@ -37,10 +38,6 @@ body {
 .nav {
     border-bottom: 0.1rem solid #080d11;
     height: 4rem;
-}
-
-.btn-research {
-    box-shadow: 0 0 0 .1rem rgba(0, 70, 67, .9);
 }
 
 .wrapper {

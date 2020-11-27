@@ -10,7 +10,7 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
         <meta charset="utf-8"/>
         <title><?= $title ?></title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="stylesheet" href="../assets/style.css" />
+        <link rel="stylesheet" href="../assets/icon/style.css" />
     </head>
 
     <body>
@@ -32,7 +32,6 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
                 </li>
                 <form class="nav-item form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="que cherchez-vous ?" aria-label="search">
-                    <button class="btn btn-research my-2 my-sm-0" type="submit">Rechercher</button>
                 </form>
             </nav>
 
@@ -64,8 +63,7 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
                             <a class="nav-link nav-item" href="logout.php">Déconnexion</a>
                         </li>
                         <form class="nav-item form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="que cherchez-vous ?" aria-label="search">
-                            <button class="btn btn-research my-2 my-sm-0" type="submit">Rechercher</button>
+                            <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="search">
                         </form>
                     </nav>
 
