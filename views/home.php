@@ -20,7 +20,7 @@
 
     <form action="#" method="POST">
 
-        <h1>Inscription</h1>
+
 
         <label for="name">Comment voulez-vous qu'on vous appelle ?</label>
         <input type="text" name="name" class="Name" placeholder="nom ou pseudonyme">

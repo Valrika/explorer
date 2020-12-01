@@ -1,20 +1,71 @@
-<?php
-
-    use App\Connection;
+<?php use App\Connection;
 
     $pdo = (new Connection())->getPdo();
 
-    $title = "Inscription";
-    require("../controllers/c-inscription.php")
-
+    $title = "mon site";
     ob_start();
-?>
+    session_start();
 
-    <?php  (count($errors) > 0); ?>
+    $title="Explorateur de fichier Valrika";
+
+if (!empty($_POST)){
+
+    $errors = array();
+
+    if (empty($_POST['username']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['username'])){
+        $errors['username'] = "Vrotre pseudo n'est pas valide (alphanumérique)";
+    }else {
+        $req=$pdo->prepare("SELECT id FROM user WHERE username = ?");
+        $req->execute([$_POST['username']]);
+        $user=$req->fetch();
+        if ($user) {
+            $errors['username']='Ce pseudo est déjà pris';
+        }
+
+        if (empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $errors['email']="votre email n'est pas valide";
+
+        } else {
+            $req=$pdo->prepare("SELECT id FROM user WHERE email = ?");
+            $req->execute([$_POST['email']]);
+            $user=$req->fetch();
+            if ($user) {
+                $errors['email']='Cet email  est déjà utilisé sur un autre compte';
+            }
+
+            if (empty($_POST['password']) || $_POST['password'] != $_POST['password_confirm']) {
+                $errors['password'];
+            }
+
+            if (empty($errors)) {
+                $req=$pdo->prepare("INSERT INTO user SET username = ?, password = ?, email = ?, confirmation_token = ?");
+
+                header('location: /home_user');
+                /*$password=password_hash($_POST['password'], PASSWORD_BCRYPT);
+                $token = str_random(60);
+                $req->execute([$_POST['username'], $password, $_POST['email'], $token]);
+                $user_id =$pdo->lastInsertId();
+                mail($_POST['email'], 'Confirmation de votre compte', "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttp://127.0.0.1:8080/confirm?id=$user_id$token=$token");
+                header('Location: /home_user');
+                exit();*/
+            }
+        }
+
+    }
+
+}
+
+    if(!empty($errors)): ?>
+
     <div class="alert alert-danger">
-        <?php /*foreach ($errors as $error) */?>
-        <li><?php /*echo $errors;*/ ?>></li>
+        <p>Vous n'avez pas rempli le formulaire correctement</p>
+        <ul>
+            <?php foreach($errors as $error): ?>
+            <li><?= $error ?></li>
+        </ul>
+        <?php endforeach; ?>
     </div>
+<?php endif; ?>
 
     <div class="page-container">
 

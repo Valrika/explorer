@@ -52,6 +52,10 @@ $router->map('GET|POST', '/folder', function () {
     require __DIR__ . '/../upload/folder.php';
 });
 
+$router->map('GET|POST', '/documents', function () {
+    require __DIR__ . '/../views/documents.php';
+});
+
 
 $match=$router->match();
 

@@ -15,9 +15,11 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
 
     <body>
 
-    <!--TODO créer une boucle pour tester si l'utilisateur est connecté ou non-->
+    <!--<h1> <? $title ?> </h1>-->
 
-    Si utilisateur PAS connecté :
+    <!--TODO créer une boucle pour tester si l'utilisateur est connecté ou non
+
+    Si utilisateur PAS connecté :-->
     <!--
         <div class="opacite">
             <nav class="nav nav-pills nav-fill fixed-top bg-th1-1">
@@ -75,7 +77,7 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
                             </ul>
                             <ul class="sidebar-nav sidebar" >
                                 <li><a href="#">Utilisateur</a></li>
-                                <li><a href="#">Documents</a></li>
+                                <li><a href="documents.php">Documents</a></li>
                                 <li><a href="#">Partage</a></li>
                             </ul>
                         </div>
