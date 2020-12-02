@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 01 déc. 2020 à 16:37
+-- Généré le : mer. 02 déc. 2020 à 08:53
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -20,17 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `utilisateur`
 --
-
--- --------------------------------------------------------
-
---
--- Structure de la table `user_docs`
---
-
-CREATE TABLE `user_docs` (
-  `id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -58,13 +47,6 @@ INSERT INTO `user_log` (`id`, `username`, `password`, `email`) VALUES
 --
 
 --
--- Index pour la table `user_docs`
---
-ALTER TABLE `user_docs`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `username` (`username`);
-
---
 -- Index pour la table `user_log`
 --
 ALTER TABLE `user_log`
@@ -77,26 +59,10 @@ ALTER TABLE `user_log`
 --
 
 --
--- AUTO_INCREMENT pour la table `user_docs`
---
-ALTER TABLE `user_docs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT pour la table `user_log`
 --
 ALTER TABLE `user_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- Contraintes pour les tables déchargées
---
-
---
--- Contraintes pour la table `user_docs`
---
-ALTER TABLE `user_docs`
-  ADD CONSTRAINT `user_docs_ibfk_1` FOREIGN KEY (`username`) REFERENCES `user_log` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

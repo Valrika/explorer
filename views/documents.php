@@ -12,7 +12,8 @@
     ob_start();
 ?>
 
-
+//répertoire dans l'explorateur de fichier
+//le nom d'utilisateur est lié à l'id
 
 
 <?php
