@@ -14,7 +14,7 @@
 
 //répertoire dans l'explorateur de fichier
 //le nom d'utilisateur est lié à l'id
-
+//l'id, lié au nom d'utilisateur, est le nom du dossier dans le répertoire
 
 <?php
     $content = ob_get_clean();
