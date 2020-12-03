@@ -1,4 +1,7 @@
 <?php
 
-//require '../controllers/c-login.php' ;
 
+
+
+
+header('Location: /inscription');

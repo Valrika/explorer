@@ -1,6 +1,6 @@
 <?php
 
-<?php
+
 
 use App\Connection;
 

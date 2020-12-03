@@ -23,17 +23,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68c42178-7d07-4310-93a3-e8b08c2322b7" name="Default Changelist" comment="-m &quot;New c-login&quot;">
-      <change afterPath="$PROJECT_DIR$/upload/folder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/upload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/fichier.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upload/file_upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/auth/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/auth/auth_inscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/confirm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/login_success.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icon/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/c-inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/c-inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/c-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/c-login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/c-inscription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/c-login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/functions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icon/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/block/plus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/folder.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/folder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/deconnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/block/home_after_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/block/home_before_login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/block/page_deconnetion_login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/block/page_login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/block/plus.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/block/plus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/explorateur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fichier.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/fichier.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/inscription.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
@@ -86,7 +99,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/icon" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -98,9 +111,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\acs\Desktop\explorer\assets\icon" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\acs\Desktop\explorer\upload" />
-      <recent name="C:\Users\acs\Desktop\explorer\views\auth" />
+      <recent name="C:\Users\acs\Desktop\explorer" />
+      <recent name="C:\Users\acs\Desktop\explorer\views" />
+      <recent name="C:\Users\acs\Desktop\explorer\public\assets\icon" />
+      <recent name="C:\Users\acs\Desktop\explorer\public" />
     </key>
   </component>
   <component name="RunManager">
@@ -147,7 +166,15 @@
       <workItem from="1606292793935" duration="3528000" />
       <workItem from="1606296525280" duration="8990000" />
       <workItem from="1606316812570" duration="2956000" />
-      <workItem from="1606376099634" duration="7219000" />
+      <workItem from="1606376099634" duration="9961000" />
+      <workItem from="1606387188869" duration="115000" />
+      <workItem from="1606387859086" duration="13087000" />
+      <workItem from="1606468052569" duration="12461000" />
+      <workItem from="1606725758577" duration="542000" />
+      <workItem from="1606726503801" duration="9919000" />
+      <workItem from="1606744939986" duration="8032000" />
+      <workItem from="1606808128415" duration="20043000" />
+      <workItem from="1606835919144" duration="38885000" />
     </task>
     <task id="LOCAL-00001" summary="-m &quot;changes&quot;">
       <created>1605283894497</created>
@@ -170,7 +197,28 @@
       <option name="project" value="LOCAL" />
       <updated>1605885443309</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="-m &quot;New c-login&quot;">
+      <created>1606384469992</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606384469992</updated>
+    </task>
+    <task id="LOCAL-00005" summary="-m &quot;New c-login&quot;">
+      <created>1606384701223</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606384701223</updated>
+    </task>
+    <task id="LOCAL-00006" summary="-m &quot;New c-login&quot;">
+      <created>1606384743864</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606384743864</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

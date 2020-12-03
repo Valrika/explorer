@@ -7,6 +7,20 @@ $pdo = (new Connection())->getPdo();
 $title = "mon site";
 ob_start();
 session_start();
+
+$title="Explorateur de fichier Valrika";
+
+
+
+
+?>
+<?php
+   /* if (empty($username) || empty($password)) {
+    echo "tous les champs sont requis";
+    } else {
+
+    header('location: ../views/explorateur');
+    }*/
 ?>
 
     <!--page d'accueil par défaut si pas de connexion
