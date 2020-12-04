@@ -54,7 +54,7 @@ $router->map('GET|POST', '/template', function () {
 });
 
 $router->map('GET|POST', '/fichier', function () {
-    require __DIR__ . '/../views/fichier.php';
+    require __DIR__ . '/../views/fichier.html';
 });
 
 $router->map('GET|POST', '/upload', function () {
@@ -74,12 +74,16 @@ $router->map('GET|POST', '/folder', function () {
     require __DIR__ . '/../upload/folder.php';
 });
 
+$router->map('GET|POST', '/documents', function () {
+    require __DIR__ . '/../views/documents.php';
+});
 
-    $match=$router->match();
+
+$match=$router->match();
 
 if( is_array($match) && is_callable( $match['target'] ) ) {
     call_user_func_array( $match['target'], $match['params'] );
 } else {
-    // no route was matched
-   header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
+// no route was matched
+    header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
 }

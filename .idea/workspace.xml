@@ -22,15 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c42178-7d07-4310-93a3-e8b08c2322b7" name="Default Changelist" comment="-m &quot;New c-login&quot;">
-      <change beforePath="$PROJECT_DIR$/controllers/c-login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/functions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/auth/login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/block/home_before_login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/block/page_deconnetion_login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/block/page_login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/block/plus.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/block/plus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/explorateur.php" beforeDir="false" />
+    <list default="true" id="68c42178-7d07-4310-93a3-e8b08c2322b7" name="Default Changelist" comment="-m &quot;inscription file completed&quot;">
+      <change afterPath="$PROJECT_DIR$/utilisateur.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/documents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/icon/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icon/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/block/home_after_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/block/home_after_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/block/home_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -154,6 +155,7 @@
       <workItem from="1606744939986" duration="8032000" />
       <workItem from="1606808128415" duration="20043000" />
       <workItem from="1606835919144" duration="39278000" />
+      <workItem from="1607075382665" duration="1204000" />
     </task>
     <task id="LOCAL-00001" summary="-m &quot;changes&quot;">
       <created>1605283894497</created>
@@ -232,7 +234,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-m &quot;changes&quot;" />
     <MESSAGE value="-m &quot;New c-login&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="-m &quot;New c-login&quot;" />
+    <MESSAGE value="-m &quot;inscription file completed&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="-m &quot;inscription file completed&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
