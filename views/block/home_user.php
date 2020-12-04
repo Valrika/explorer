@@ -1,6 +1,6 @@
 <?php
 
-
+<?php
 
 use App\Connection;
 
@@ -13,11 +13,6 @@ ob_start();
 
     <!--se connecter et ou créer un compte en haut à droite-->
 
-    <head>
-        <title>Accueil</title>
-    </head>
-
-<body>
 
     <<div class="col-md-3 offset-md-4 form-div">
 
@@ -30,8 +25,6 @@ ob_start();
             </div>
     </div>
 
-
-</body>
 
 <?php
 

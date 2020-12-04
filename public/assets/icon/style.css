@@ -1,19 +1,16 @@
-/*"href="../assets/css/style.css"
+/*
 
-fichier css bootstrap + ajouts personnels
- */
-
-/*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-
-/*background-colors*/
-
+*/
 
 /*
+"href="../assets/css/style.css"
+
+fichier css bootstrap + ajouts personnels
+
 texte recherche en couleur
 changer couleur des liens
 ne pas souligner les liens, seulement hover
@@ -24,6 +21,7 @@ ajouter des fondus sur chaque changement de page sans que le template ne bouge
 body {
     background-image: url(../img/storage.jpg);
     background-attachment: fixed;
+    text-decoration-color: #247e6d;!important;
 
 }
 
@@ -42,24 +40,14 @@ body {
     height: 4rem;
 }
 
-.btn-research {
-    box-shadow: 0 0 0 .1rem rgba(0, 70, 67, .9);
-}
-
-/*
-.btn-info {
-color: rgba(0, 70, 67, .9)
-}
-*/
-
 .wrapper {
-    transition: all .4s ease 0s;
     height: 100%;
 }
 
-
-.page-container {
-    margin: 120px auto 0 auto;
+.sidebar-nav {
+    list-style: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 h1 {
@@ -67,12 +55,14 @@ h1 {
     font-weight: 700;
     text-shadow:0 1px 4px rgba(0,0,0,.2);
     text-align:center;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
 }
 
 input {
     width:30rem;
     height:3rem;
-    margin-top:2rem;
+    margin-bottom:1rem;
     background:rgba(00,46,43,.15);
     text-align:center;
     border-radius:6px;
@@ -82,10 +72,6 @@ input {
 .placeholder
 {
     color: #247e6d;
-}
-
-.btn-margin {
-    margin-top: 1rem;
 }
 
 form {
@@ -100,14 +86,13 @@ form {
     background: #011618;
     position: fixed;
     height: 100%;
-    z-index: 10000;
     transition: all .4s ease 0s;
+    z-index: 3;
+    padding-top: 5rem
 }
 
-.sidebar-nav {
-    list-style: none;
-    padding: 1rem;
-    margin-bottom: 1rem;
+nav.nav {
+    z-index: 5;
 }
 
 .sidebar-brand {
@@ -122,7 +107,6 @@ form {
     border-top: 0.1rem solid #16262b;
     border-bottom: 0.1rem solid #080d11;
     transition: background-color 1.5s;
-
 
 }
 
