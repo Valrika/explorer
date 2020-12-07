@@ -54,7 +54,7 @@ $router->map('GET|POST', '/template', function () {
 });
 
 $router->map('GET|POST', '/fichier', function () {
-    require __DIR__ . '/../views/fichier.html';
+    require __DIR__ . '/../views/fichier.php';
 });
 
 $router->map('GET|POST', '/upload', function () {
@@ -63,6 +63,10 @@ $router->map('GET|POST', '/upload', function () {
 
 $router->map('GET|POST', '/file_upload', function () {
     require __DIR__ . '/../upload/file_upload.php';
+});
+
+$router->map('GET|POST', '/file_up', function () {
+    require __DIR__ . '/../views/file_up.php';
 });
 
 

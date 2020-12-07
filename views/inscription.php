@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Connexion à la bdd
 use App\Connection;
 //
@@ -6,7 +7,7 @@ $pdo = (new Connection())->getPdo();
 
 $title = "mon site";
 ob_start();
-session_start();
+
 $password = "";
 
 $title="Explorateur de fichier Valrika";

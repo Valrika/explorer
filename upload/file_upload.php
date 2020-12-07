@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
     move_uploaded_file($tname, $upload_dir . '/' . $pname);
 
     //query pour insertion vers la BDD
-    $sql="INSERT INTO fileup (titre, file) VALUES ($title $pname)";
+    $sql="INSERT INTO fileup (titre, image) VALUES ($title $pname)";
 
     $pdo->exec($sql);
 
