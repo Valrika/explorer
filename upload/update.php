@@ -5,28 +5,30 @@ $pdo = (new Connection())->getPdo();
 
 
 $msg='';
-// Check if the file id exists, for example update.php?id=1 will get the contact with the id of 1
+// Vérifification le fichier a bien un ID ? Par ex update.php?id=1 va mettre à jour le fichier dont qui a pour ID  1
 if (isset($_GET['id'])) {
     if (!empty($_POST)) {
-        // This part is similar to the create.php, but instead we update a record and not insert
+        //utilisation de l'opérateur ternaire  qui permet de retourner 1 valeur parmi 2 valeurs e fonction de la condition
+        //Pour plus d'info http://www.finalclap.com/faq/102-php-operateur-ternaire
         $id=isset($_POST['id']) ? $_POST['id'] : NULL;
         $name=isset($_POST['name']) ? $_POST['name'] : '';
         $file=isset($_POST['file']) ? $_POST['file'] : '';
         $created=isset($_POST['created']) ? $_POST['created'] : date('Y-m-d H:i:s');
-        // Update the record
+        //  requête pour une MAJ du fichier
         $stmt=$pdo->prepare('UPDATE fileup SET id = ?, name = ?, file = ?, created = ? WHERE id = ?');
         $stmt->execute([$id, $name, $file, $created, $_GET['id']]);
         $msg='Updated Successfully!';
     }
-    // Get the contact from the contacts table
+    // trouver le fichier dans la table fileup  à partir d'un id
     $stmt=$pdo->prepare('SELECT * FROM fileup WHERE id = ?');
     $stmt->execute([$_GET['id']]);
     $file =$stmt->fetch(PDO::FETCH_ASSOC);
+    //Si le fichier est introuvable
     if (!$file) {
-        exit('Contact doesn\'t exist with that ID!');
+        exit('Aucun fichier avec cet ID n\'a été trouvé !');
     }
 } else {
-    exit('No ID specified!');
+    exit('Aucun ID n\'est spécifié!');
 }    
     ?>
 

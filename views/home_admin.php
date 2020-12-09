@@ -3,20 +3,23 @@
 include_once '../upload/delete.php';
 use App\Connection;
 $pdo = (new Connection())->getPdo();
-// Get the page via GET request (URL param: page), if non exists default the page to 1
+
+// Récupérer la page via la requête GET (URL param: page), if non exists default the page to 1
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
-// Number of records to show on each page
+// Définir le nombre de fichier enregistré sur une page
 $records_per_page = 5;
 
-// Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
+// Préparation des instructions SQL (statement) pour la récupération des données de notre bdd (table fileup), LIMIT va déterminer le nbr de page
 $stmt = $pdo->prepare('SELECT * FROM fileup ORDER BY id LIMIT :current_page, :record_per_page');
 $stmt->bindValue(':current_page', ($page-1)*$records_per_page, PDO::PARAM_INT);
 $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
 $stmt->execute();
-// Fetch the records so we can display them in our template.
+// récupérer les données pour pouvoir les afficher sur le template.
 $files = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <script src="https://kit.fontawesome.com/31cfd28a45.js" crossorigin="anonymous"></script>
@@ -41,6 +44,7 @@ $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
                 <td><?=$file['file']?></td>
                 <td><?=$file['created']?></td>
                 <td class="actions">
+                    <!-- icones update et delete avec java script plus lien -->
                     <a href="/update?id=<?=$file['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
                     <a href="/delete?id=<?=$file['id']?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
                 </td>
@@ -48,6 +52,7 @@ $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
         <?php endforeach; ?>
         </tbody>
     </table>
+    <!-- Mise en page des données sur le template -->
     <div class="pagination">
         <?php if ($page > 1): ?>
             <a href="/home_admin?page=<?=$page-1?>"><i class="fas fa-angle-double-left fa-sm"></i></a>

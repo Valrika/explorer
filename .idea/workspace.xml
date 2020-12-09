@@ -23,20 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68c42178-7d07-4310-93a3-e8b08c2322b7" name="Default Changelist" comment="-m &quot;pull&quot;">
-      <change afterPath="$PROJECT_DIR$/upload/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/essais.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/home_admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/icon/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icon/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upload/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upload/file_upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/file_upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/folder.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/block/plus.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fichier.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/fichier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home_admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +156,7 @@
       <workItem from="1606835919144" duration="39278000" />
       <workItem from="1607075382665" duration="6260000" />
       <workItem from="1607088207319" duration="531000" />
-      <workItem from="1607088798807" duration="42615000" />
+      <workItem from="1607088798807" duration="49803000" />
     </task>
     <task id="LOCAL-00001" summary="-m &quot;changes&quot;">
       <created>1605283894497</created>
@@ -229,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607329486885</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="-m &quot;pull&quot;">
+      <created>1607501589574</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607501589574</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
