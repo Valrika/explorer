@@ -75,11 +75,31 @@ $router->map('GET|POST', '/Files', function () {
 });
 
 $router->map('GET|POST', '/folder', function () {
-    require __DIR__ . '/../upload/folder.php';
+    require __DIR__ . '/../upload/functions.php';
 });
 
 $router->map('GET|POST', '/documents', function () {
     require __DIR__ . '/../views/documents.php';
+});
+
+$router->map('GET|POST', '/essais', function () {
+    require __DIR__ . '/../views/essais.php';
+});
+
+$router->map('GET|POST', '/home_admin', function () {
+    require __DIR__ . '/../views/home_admin.php';
+});
+
+$router->map('GET|POST', '/create', function () {
+    require __DIR__ . '/../upload/create.php';
+});
+
+$router->map('GET|POST', '/update', function () {
+    require __DIR__ . '/../upload/update.php';
+});
+
+$router->map('GET|POST', '/delete', function () {
+    require __DIR__ . '/../upload/delete.php';
 });
 
 

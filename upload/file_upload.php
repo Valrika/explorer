@@ -1,66 +1,51 @@
 <?php
 
 use App\Connection;
-$pdo =(new Connection())->getPdo();
 
-if (isset($_POST['submit'])) {
+$pdo = (new Connection())->getPdo();
 
-    //Récupérer le nom du fichier
-    $title=$_POST['title'];
+if(isset($_POST['submit'])) {
 
-    //nom de fichier avec un nombre aléatoire afin que les éléments similaires ne soient pas remplacés
-    $pname=rand(1000, 10000) . "-" . $_FILES['file']['name'];
+// Count total files
+    $countfiles=count($_FILES['files']['name']);
 
-    //Nom temporaire du fichier pour pouvoir le stocker dans la BDD
-    $tname=$_FILES['file']['tmp_name'];
+    // Prepared statement
+    $query = "INSERT INTO fileup (name, file) VALUES(?,?)";
 
-    //Téléchargement du chemin du dossier de téléchargement
-    $upload_dir="Files";
+    $statement = $pdo->prepare($query);
 
-    //pour ensuite déplacer les docs téléchargé vers un endroit spécifique
-    move_uploaded_file($tname, $upload_dir . '/' . $pname);
+    // Loop all files
+    for($i=0;$i<$countfiles;$i++){
 
-    //query pour insertion vers la BDD
-    $sql="INSERT INTO fileup (titre, image) VALUES ($title $pname)";
+        // File name
+        $filename = $_FILES['files']['name'][$i];
 
-    $pdo->exec($sql);
+        // Location
+        $target_file = 'Files/'.$filename;
 
-    $result=$pdo;
+        // file extension
+        $file_extension = pathinfo($target_file, PATHINFO_EXTENSION);
+        $file_extension = strtolower($file_extension);
+
+        // Valid image extension
+        $valid_extension = array("png","jpeg","jpg");
+
+        if(in_array($file_extension, $valid_extension)){
+
+            // Upload file
+            if(move_uploaded_file($_FILES['files']['tmp_name'][$i],$target_file)){
+
+                // Execute query
+                $statement->execute(array($filename,$target_file));
 
 
-    if ($result == true) {
 
-        echo "Le fichier a été téléchérgé avec succès";
-    } else {
-        echo "Erreur";
+            }
+        }
+
     }
 
+    header('location: /home_admin');
 
 
 }
-?>
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>File Upload</title>
-</head>
-<body>
-
-<form method="post" enctype="multipart/form-data">
-    <label>Title</label>
-    <input type="text" name="title">
-    <label>File Upload</label>
-    <input type="file" name="fileToUpload">
-    <input type="submit" name="submit">
-
-
-</form>
-
-</body>
-</html>

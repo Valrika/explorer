@@ -1,21 +1,24 @@
-<?php
-use App\Connection;
 
-$pdo = (new Connection())->getPdo();
+
+<?php
+
+include_once '../upload/file_upload.php'
 
 ?>
 
 
-    <!DOCTYPE html>
-    <html>
-    <body>
 
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        Select image to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload Image" name="submit">
-    </form>
+<!DOCTYPE html>
+<html lang="fr">
 
-    </body>
-    </html>
 
+<br>
+<br>
+
+<form method='post' action='' enctype='multipart/form-data'>
+    <input type='file' name='files[]' multiple />
+    <input type='submit' value='Submit' name='submit' />
+</form>
+
+<br>
+<br>
