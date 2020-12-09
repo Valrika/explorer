@@ -2,13 +2,13 @@
     require_once '../src/functions.php';
     use App\Connection;
 
-    session_start();
+    //session_start(); SUPPRIME car doublon avec le template
     $pdo=(new Connection())->getPdo();
 
     $role = "";
     $user = "";
 
-    $title = "Inscription";
+    $title = "Se connecter";
 
     ob_start();
 ?>
@@ -27,7 +27,7 @@
     <?php
 
         // Condition pour accès au compte utilisateur.
-        // Si on appui sur le bouton se connecter (submit)
+        // Si on appuie sur le bouton se connecter (submit)
             if(isset($_POST["submit"])) {
 
                 //Si le formulaire n'est pas complètement remplie message d'erreur
