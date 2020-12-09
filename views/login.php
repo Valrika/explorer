@@ -5,12 +5,51 @@
     //session_start(); SUPPRIME car doublon avec le template
     $pdo=(new Connection())->getPdo();
 
-    $role = "";
-    $user = "";
 
     $title = "Se connecter";
 
     ob_start();
+
+$result = "";
+
+
+if (isset($_POST['submit'])) {
+    if (empty($_POST["username"]) || empty($_POST["password"])) {
+        echo 'Tous les champs sont requis';
+
+    }
+// Si tous les champs sont complétés
+    if (!empty($_POST["username"]) && !empty($_POST["password"])) {
+        $username=$_POST["username"];
+        $password=$_POST["password"];
+        //Requête pour récupérer les identifiants dans la bdd pour accès
+        $sth=$pdo->prepare('SELECT * FROM user WHERE username = :username AND password = :password');
+        $sth->bindParam(':username', $username);
+        $sth->execute(['username'=>$username, 'password'=>$password]);
+        $result=$sth->fetch();
+    }
+    //Si les identifiants sont correctes
+    if ($result){
+    // Mise en place de l'authentification
+        $role_id = $result['role_id'];
+        $_SESSION['id']=$result['id'];
+        //Permission pour admin = 1
+        if ($role_id== 1){
+            header('Location: /home_admin');
+        }
+        //permission pour user = 2
+        elseif ($role_id = 2){
+            header('location: /home_user');
+        }
+    }
+    else{
+        if ($result == false) {
+            echo "Vos identifiants ne sont pas correctes, veuillez les saisir à nouveau";
+        }
+
+    }
+
+}
 ?>
 
 <form action="#" method="POST">
@@ -26,45 +65,6 @@
 
     <?php
 
-        // Condition pour accès au compte utilisateur.
-        // Si on appuie sur le bouton se connecter (submit)
-            if(isset($_POST["submit"])) {
-
-                //Si le formulaire n'est pas complètement remplie message d'erreur
-                if (empty($_POST["username"]) || empty($_POST["password"])) {
-                    echo 'Tous les champs sont requis';
-
-                }
-                // Si tous les champs sont complétés
-                if (!empty($_POST["username"]) && !empty($_POST["password"])) {
-                    $username=$_POST["username"];
-                    $password=$_POST["password"];
-
-                    // On compare les informations remplies par le user et celles de la BDD
-                    try {
-                        $sth=$pdo->prepare('SELECT * FROM user WHERE username = :username AND password = :password');
-                        $sth->bindParam(':username', $username);
-                        $sth->execute(['username'=>$username, 'password'=>$password]);
-                        $result=$sth->fetch();
-                    // Si elles correspondent le user est dirigé vers home_user
-                      if ($result == true){
-
-                          header('Location: /home_user');
-                      }
-                      //Sinon message d'erreur
-                      if ($result == false){
-                          echo "Vos identifiants ne sont pas correctes, veuillez les saisir à nouveau";
-                      }
-
-
-                    } catch (Exception $exception) {
-
-                        echo "".$exception->getMessage();
-                    }
-
-
-                }
-            }
 
         $content = ob_get_clean();
         require("template.php");
