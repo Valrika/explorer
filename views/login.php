@@ -2,7 +2,6 @@
     require_once '../src/functions.php';
     use App\Connection;
 
-    //session_start(); SUPPRIME car doublon avec le template
     $pdo=(new Connection())->getPdo();
 
     $role = "";
@@ -10,7 +9,7 @@
 
     $title = "Se connecter";
 
-    ob_start();
+    //ob_start();
 ?>
 
 <form action="#" method="POST">
@@ -23,6 +22,8 @@
         <input type="password" name="password" class="Address" placeholder="mot de passe">
 
         <button class="btn btn-info btn-margin" type="submit" value="Add" name="submit">Envoyer</button>
+
+    <h3>Pas encore inscrit ? <a href="/inscription">Créez un compte</a></h3>
 
     <?php
 
@@ -66,8 +67,8 @@
                 }
             }
 
-        $content = ob_get_clean();
-        require("template.php");
+        //$content = ob_get_clean();
+        //require('template.php');
  ?>
 
 
