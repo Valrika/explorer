@@ -1,4 +1,13 @@
 <?php
+
+    use App\Connection;
+
+    $pdo = (new Connection())->getPdo();
+
+    $title = "Déconnexion";
+
+    ob_start();
+
     //login_success.php
     session_start();
         if(isset($_SESSION["username"]))
@@ -10,4 +19,7 @@
             {
                 header("location:pdo_login.php");
             }
+
+    $content = ob_get_clean();
+    require("template_login.php");
 ?>

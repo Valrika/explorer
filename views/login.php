@@ -9,7 +9,7 @@
 
     $title = "Se connecter";
 
-    //ob_start();
+    ob_start();
 ?>
 
 <form action="#" method="POST">
@@ -67,8 +67,8 @@
                 }
             }
 
-        //$content = ob_get_clean();
-        //require('template.php');
+        $content = ob_get_clean();
+        require('template_login.php');
  ?>
 
 

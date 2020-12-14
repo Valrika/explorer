@@ -10,6 +10,7 @@
     $password = "";
 
     $title="Explorateur de fichier Valrika";
+    ob_start();
 ?>
 
 <form action="#" method="POST">
@@ -121,5 +122,5 @@
 
 <?php
     $content = ob_get_clean();
-    require("template.php");
+    require("template_login.php");
 ?>
