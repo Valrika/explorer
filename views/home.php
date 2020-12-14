@@ -11,15 +11,18 @@
 
 <div class="page-container">
 
-    <form action="#" method="POST" style = "margin-top: 5em">
+    <form action="#" method="POST" class ="form-group col-md-6">
 
         <label for="name">Comment voulez-vous qu'on vous appelle ?</label>
         <input type="text" name="name" class="Name" placeholder="nom ou pseudonyme">
+        <br>
+        <br>
 
         <label for="email">Email</label>
         <small id="email" class="form-text text-muted">Nous ne vendrons jamais vos données :)</small>
         <input type="text" name="email" class="Email" placeholder="email">
-
+        <br>
+        <br>
 
         <label for="password">Mot de passe</label>
         <input type="password" name="password" class="Address" placeholder="mot de passe">
