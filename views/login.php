@@ -1,16 +1,10 @@
 <?php
-    require_once '../src/functions.php';
-    use App\Connection;
 
-    //session_start(); SUPPRIME car doublon avec le template
-    $pdo=(new Connection())->getPdo();
-
-
-    $title = "Se connecter";
-
-    ob_start();
-
+use App\Connection;
+$pdo = (new Connection())->getPdo();
 $result = "";
+$title = "";
+$erreur = "";
 
 
 if (isset($_POST['submit'])) {
@@ -22,22 +16,33 @@ if (isset($_POST['submit'])) {
     if (!empty($_POST["username"]) && !empty($_POST["password"])) {
         $username=$_POST["username"];
         $password=$_POST["password"];
-        //Requête pour récupérer les identifiants dans la bdd pour accès
+
         $sth=$pdo->prepare('SELECT * FROM user WHERE username = :username AND password = :password');
         $sth->bindParam(':username', $username);
         $sth->execute(['username'=>$username, 'password'=>$password]);
         $result=$sth->fetch();
+        session_start();
+        $_SESSION['connecte']=1;
+        header('Location: /home_admin');
+    } else {
+        $erreur='Identifiants incorrectes ';
     }
-    //Si les identifiants sont correctes
-    if ($result){
-    // Mise en place de l'authentification
+
+    require_once '../views/functions/authen.php';
+    if (est_connecte()) {
+        header('Location: /home_admin');
+        exit();
+    }
+}
+
+    /*if ($result){
+
         $role_id = $result['role_id'];
         $_SESSION['id']=$result['id'];
-        //Permission pour admin = 1
         if ($role_id== 1){
+            
             header('Location: /home_admin');
         }
-        //permission pour user = 2
         elseif ($role_id = 2){
             header('location: /home_user');
         }
@@ -49,8 +54,13 @@ if (isset($_POST['submit'])) {
 
     }
 
-}
+}*/
 ?>
+<?php if ($erreur): ?>
+    <div class="alert alert-danger">
+        <?=$erreur?>
+    </div>
+<?php endif; ?>
 
 <form action="#" method="POST">
 
@@ -63,14 +73,11 @@ if (isset($_POST['submit'])) {
 
         <button class="btn btn-info btn-margin" type="submit" value="Add" name="submit">Envoyer</button>
 
+</form>
     <?php
-
-
-        $content = ob_get_clean();
-        require("template.php");
- ?>
-
-
+    /*$content = ob_get_clean();
+    require("template.php");*/
+    ?>
 
 
 

@@ -1,5 +1,6 @@
 <?php
-$_SESSION = array();
+session_start();
+unset($_SESSION['connecte']);
     header('Location: /login');
 
 

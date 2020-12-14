@@ -29,15 +29,15 @@ $router->map('GET|POST', '/login_succes', function () {
 });
 
 
-$router->map('GET|POST', '/auth', function () {
-    require __DIR__ . '/../views/auth/auth.php';
+$router->map('GET|POST', '/functions', function () {
+    require __DIR__ . '/../views/functions/auth.php';
 });
 
 $router->map('GET|POST', '/home_user', function () {
     require __DIR__ . '/../views/home_user.php';
 });
-/*/$router->map('GET|POST', '/auth', function () {
-    require __DIR__ . '/../src/auth.php';
+/*/$router->map('GET|POST', '/functions', function () {
+    require __DIR__ . '/../src/functions.php';
 });*/
 
 $router->map('GET|POST', '/inscription', function () {
@@ -101,6 +101,11 @@ $router->map('GET|POST', '/update', function () {
 $router->map('GET|POST', '/delete', function () {
     require __DIR__ . '/../upload/delete.php';
 });
+
+$router->map('GET|POST', '/authen', function () {
+    require __DIR__ . '/../views/functions/authen.php';
+});
+
 
 
 $match=$router->match();

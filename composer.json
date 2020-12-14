@@ -16,6 +16,7 @@
     "filp/whoops": "^2.9",
     "altorouter/altorouter": "^2.0",
     "symfony/var-dumper": "^5.1",
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "dompdf/dompdf": "^0.8.6"
   }
 }

@@ -1,6 +1,10 @@
 <?php
-
+if (session_status() === PHP_SESSION_NONE) {
     session_start();
+}
+require_once  '../views/functions/authen.php';
+$title = "";
+$content = "";
 
 ?>
 
@@ -37,9 +41,12 @@ https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-ph
                             <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm9.854-2.854a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                         </svg>
                     </div>
-                    <li>
-                        <a class="nav-link nav-item" href="/logout">Déconnexion</a>
-                    </li>
+                    <ul>
+
+                        <?php if (est_connecte()): ?>
+                            <a class="nav-link nav-item" href="/logout">Déconnexion</a>
+                        <?php endif; ?>
+                    </ul>
                     <form class="nav-item form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="search">
                     </form>
