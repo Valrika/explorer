@@ -34,14 +34,12 @@ if (isset($_POST['submit'])) {
         header('Location: /home_admin');
         exit();
     }
-}
-
-    /*if ($result){
+    if ($result){
 
         $role_id = $result['role_id'];
         $_SESSION['id']=$result['id'];
         if ($role_id== 1){
-            
+
             header('Location: /home_admin');
         }
         elseif ($role_id = 2){
@@ -55,7 +53,11 @@ if (isset($_POST['submit'])) {
 
     }
 
-}*/
+}
+
+
+
+
 ?>
 <?php if ($erreur): ?>
     <div class="alert alert-danger">

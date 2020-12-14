@@ -1,7 +1,7 @@
 <?php
 
-//require_once '../views/functions/authen.php';
-//forcer_utilisateur_connecte();
+require_once '../views/functions/authen.php';
+forcer_utilisateur_connecte();
 
 //include_once '../upload/delete.php';
 
