@@ -22,16 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c42178-7d07-4310-93a3-e8b08c2322b7" name="Default Changelist" comment="-m &quot;inscription file completed&quot;">
-      <change afterPath="$PROJECT_DIR$/utilisateur.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/documents.php" afterDir="false" />
+    <list default="true" id="68c42178-7d07-4310-93a3-e8b08c2322b7" name="Default Changelist" comment="-m &quot;pull&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/icon/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icon/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/block/home_after_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/block/home_after_login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/block/home_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/file_upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/file_upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home_admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,12 +71,13 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunConfigurationTargetLRU" value="ac75cca2-6d82-4d5f-b8b2-1c5452b34db8" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/icon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../images/drink.jpg" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -95,9 +93,9 @@
       <recent name="C:\Users\acs\Desktop\explorer\assets\icon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\acs\Desktop\explorer\views" />
       <recent name="C:\Users\acs\Desktop\explorer\upload" />
       <recent name="C:\Users\acs\Desktop\explorer" />
-      <recent name="C:\Users\acs\Desktop\explorer\views" />
       <recent name="C:\Users\acs\Desktop\explorer\public\assets\icon" />
       <recent name="C:\Users\acs\Desktop\explorer\public" />
     </key>
@@ -106,6 +104,7 @@
     <configuration name="console_3.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/ac75cca2-6d82-4d5f-b8b2-1c5452b34db8/console_3.sql" />
       <script-mode>FILE</script-mode>
+      <data-source id="ac75cca2-6d82-4d5f-b8b2-1c5452b34db8" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -155,7 +154,9 @@
       <workItem from="1606744939986" duration="8032000" />
       <workItem from="1606808128415" duration="20043000" />
       <workItem from="1606835919144" duration="39278000" />
-      <workItem from="1607075382665" duration="1204000" />
+      <workItem from="1607075382665" duration="6260000" />
+      <workItem from="1607088207319" duration="531000" />
+      <workItem from="1607088798807" duration="49803000" />
     </task>
     <task id="LOCAL-00001" summary="-m &quot;changes&quot;">
       <created>1605283894497</created>
@@ -213,7 +214,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607002665377</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="-m &quot;pull&quot;">
+      <created>1607329486885</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607329486885</updated>
+    </task>
+    <task id="LOCAL-00010" summary="-m &quot;pull&quot;">
+      <created>1607501589574</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607501589574</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +250,8 @@
     <MESSAGE value="-m &quot;changes&quot;" />
     <MESSAGE value="-m &quot;New c-login&quot;" />
     <MESSAGE value="-m &quot;inscription file completed&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="-m &quot;inscription file completed&quot;" />
+    <MESSAGE value="-m &quot;pull&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="-m &quot;pull&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

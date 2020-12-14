@@ -1,66 +1,54 @@
 <?php
 
 use App\Connection;
-$pdo =(new Connection())->getPdo();
 
-if (isset($_POST['submit'])) {
+$pdo = (new Connection())->getPdo();
 
-    //Récupérer le nom du fichier
-    $title=$_POST['title'];
+if(isset($_POST['submit'])) {
 
-    //nom de fichier avec un nombre aléatoire afin que les éléments similaires ne soient pas remplacés
-    $pname=rand(1000, 10000) . "-" . $_FILES['file']['name'];
+// Compter le nombre total de fichier avec count (fonction qui retourne le nombre d'éléments dans un tableau)
+    // $_FILES est une Variable de téléchargement de fichier (superglobale)
+    $countfiles=count($_FILES['files']['name']);
 
-    //Nom temporaire du fichier pour pouvoir le stocker dans la BDD
-    $tname=$_FILES['file']['tmp_name'];
+    // Preparer la requête
+    $query = "INSERT INTO fileup (name, file) VALUES(?,?)";
 
-    //Téléchargement du chemin du dossier de téléchargement
-    $upload_dir="Files";
+    $statement = $pdo->prepare($query);
 
-    //pour ensuite déplacer les docs téléchargé vers un endroit spécifique
-    move_uploaded_file($tname, $upload_dir . '/' . $pname);
+    // Faire un boucle
+    for($i=0;$i<$countfiles;$i++){
 
-    //query pour insertion vers la BDD
-    $sql="INSERT INTO fileup (titre, file) VALUES ($title $pname)";
+        // Le nom du fichier
+        $filename = $_FILES['files']['name'][$i];
 
-    $pdo->exec($sql);
+        // Location
+        $target_file = 'Files/'.$filename;
 
-    $result=$pdo;
+        // file extension
+        // path_info est une fonction qui retourne des infos sur le path (chemin), sous forme de chaine ou de tableau associatif
+        $file_extension = pathinfo($target_file, PATHINFO_EXTENSION);
+        //strtolower est une fonction qui renvoie une chaine de caractère en minuscule
+        $file_extension = strtolower($file_extension);
+
+        // Vérifier que l'extension du fichier est bien valide
+        $valid_extension = array("png","jpeg","jpg",'pdf', 'docx');
+        // Si les 2 conditions sont remplies à savoir le chemin et l'extension du fichier sont correctes
+        if(in_array($file_extension, $valid_extension)){
+
+            // Alors les fichiers peuvent être téléchargés
+            if(move_uploaded_file($_FILES['files']['tmp_name'][$i],$target_file)){
+
+                // Execution de la requête
+                $statement->execute(array($filename,$target_file));
 
 
-    if ($result == true) {
 
-        echo "Le fichier a été téléchérgé avec succès";
-    } else {
-        echo "Erreur";
+            }
+        }
+
     }
 
+    header('location: /home_admin');
 
 
 }
-?>
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>File Upload</title>
-</head>
-<body>
-
-<form method="post" enctype="multipart/form-data">
-    <label>Title</label>
-    <input type="text" name="title">
-    <label>File Upload</label>
-    <input type="file" name="fileToUpload">
-    <input type="submit" name="submit">
-
-
-</form>
-
-</body>
-</html>

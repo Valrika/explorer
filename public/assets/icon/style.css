@@ -154,3 +154,7 @@ nav.nav {
 .bg-th1-5 {
     background-color: #ffc5a0;
 }
+
+.table {
+    border-collapse: collapse;
+}

@@ -1,8 +1,10 @@
 <?php
 
-
-
     header('Location: /inscription');
+
+$_SESSION = array();
+    header('Location: /login');
+
 
 
 //page de déconnexion de l'utilisateur, renvoie vers home ?

@@ -1,16 +1,24 @@
 
 
+<?php
 
-    <!DOCTYPE html>
-    <html>
-    <body>
+include_once '../upload/file_upload.php'
 
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        Select image to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload Image" name="submit">
-    </form>
+?>
 
-    </body>
-    </html>
 
+
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<br>
+<br>
+
+<form method='post' action='' enctype='multipart/form-data'>
+    <input type='file' name='files[]' multiple />
+    <input type='submit' value='Submit' name='submit' />
+</form>
+
+<br>
+<br>

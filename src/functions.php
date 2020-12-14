@@ -1,14 +1,20 @@
 <?php
+use App\Connection;
+$pdo=(new Connection())->getPdo();
 
-function debug($variable){
-    echo '<pre>' . print_r($variable, true) . '';;
+function adminConnected($variable){
+    $sth=$pdo->prepare('SELECT user.username, user.password, user.role_id FROM user WHERE role_id = "admin"');
+    $sth->bindParam(':username', $username);
+    $sth->execute(['username'=>$username, 'password'=>$password]);
+    $result=$sth->fetch();
+    // Si elles correspondent le user est dirigé vers home_user
+    if ($result == true){
+
+    }
 }
 
 
-function str_random($lengh){
-    $alphabet = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
-    return substr(str_shuffle(str_repeat($alphabet, $lengh)), 0, $lengh);
-}
+
 
 
 
