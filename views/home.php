@@ -9,18 +9,9 @@
     ob_start();
 ?>
 
-    <!--page d'accueil par défaut si pas de connexion
-
-    sur chaque page du site : tester si déjà connecté
-
-    si oui -> home_after login
-    si non -> home-->
-
 <div class="page-container">
 
-    <form action="#" method="POST">
-
-
+    <form action="#" method="POST" style = "margin-top: 5em">
 
         <label for="name">Comment voulez-vous qu'on vous appelle ?</label>
         <input type="text" name="name" class="Name" placeholder="nom ou pseudonyme">
@@ -50,5 +41,5 @@
 
 <?php
     $content = ob_get_clean();
-    require("template.php");
+    require("template_login.php");
 ?>

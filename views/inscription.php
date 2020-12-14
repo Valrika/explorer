@@ -34,7 +34,7 @@ if (!empty($_POST)){
         if (empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             // Si l'email n'est pas valide = message d'erreur
             $errors['email']="votre email n'est pas valide";
-
+            
 
         } else {
             //CONNECTION à la BDD pour vérification de l'email
@@ -120,6 +120,6 @@ if(!empty($errors)): ?>
     </div>
 
 <?php
-$content = ob_get_clean();
-require("template.php");
+    $content = ob_get_clean();
+    require("template_login.php");
 ?>
