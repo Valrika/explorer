@@ -3,9 +3,10 @@
 use App\Connection;
 $pdo = (new Connection())->getPdo();
 $result = "";
-$title = "";
+$title = "coucou";
 $erreur = "";
 
+ob_start();
 
 if (isset($_POST['submit'])) {
     if (empty($_POST["username"]) || empty($_POST["password"])) {
@@ -75,8 +76,9 @@ if (isset($_POST['submit'])) {
 
 </form>
     <?php
-    /*$content = ob_get_clean();
-    require("template.php");*/
+    $content = ob_get_clean();
+    require("template_login.php");
+
     ?>
 
 

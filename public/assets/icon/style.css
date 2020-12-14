@@ -21,6 +21,10 @@ ajouter des fondus sur chaque changement de page sans que le template ne bouge
 
 /*TEMPLATE*/
 
+.container {
+    margin-top: 10rem !important;
+}
+
 body {
     background-image: url(../img/storage.jpg);
     background-attachment: fixed;
