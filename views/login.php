@@ -1,10 +1,18 @@
 <?php
 
 use App\Connection;
+
 $pdo = (new Connection())->getPdo();
+//$result = "";
+
+//$erreur = "";
+ob_start();
+
+$title = "Se connecter";
+
+
+
 $result = "";
-$title = "";
-$erreur = "";
 
 
 if (isset($_POST['submit'])) {
@@ -14,6 +22,45 @@ if (isset($_POST['submit'])) {
     }
 // Si tous les champs sont complétés
     if (!empty($_POST["username"]) && !empty($_POST["password"])) {
+        $username=$_POST["username"];
+        $password=$_POST["password"];
+        //Requête pour récupérer les identifiants dans la bdd pour accès
+        $sth=$pdo->prepare('SELECT * FROM user WHERE username = :username AND password = :password');
+        $sth->bindParam(':username', $username);
+        $sth->execute(['username'=>$username, 'password'=>$password]);
+        $result=$sth->fetch();
+    }
+    //Si les identifiants sont correctes
+    if ($result){
+        // Mise en place de l'authentification
+        $role_id = $result['role_id'];
+        $_SESSION['id']=$result['id'];
+        //Permission pour admin = 1
+        if ($role_id== 1){
+            header('Location: /home_admin');
+        }
+        //permission pour user = 2
+        elseif ($role_id = 2){
+            header('location: /home_user');
+        }
+    }
+    else{
+        if ($result == false) {
+            echo "Vos identifiants ne sont pas correctes, veuillez les saisir à nouveau";
+        }
+
+    }
+
+}
+?>
+
+/*if (isset($_POST['submit'])) {
+    if (empty($_POST["username"]) || empty($_POST["password"])) {
+        echo 'Tous les champs sont requis';
+
+    }*/
+// Si tous les champs sont complétés
+  /*  if (!empty($_POST["username"]) && !empty($_POST["password"])) {
         $username=$_POST["username"];
         $password=$_POST["password"];
 
@@ -33,7 +80,7 @@ if (isset($_POST['submit'])) {
         header('Location: /home_admin');
         exit();
     }
-}
+}*/
 
     /*if ($result){
 
@@ -56,11 +103,11 @@ if (isset($_POST['submit'])) {
 
 }*/
 ?>
-<?php if ($erreur): ?>
-    <div class="alert alert-danger">
-        <?=$erreur?>
+<?php //if ($erreur): ?>
+   <!-- <div class="alert alert-danger">-->
+        <?//=$erreur?>
     </div>
-<?php endif; ?>
+<?php //endif; ?>
 
 <form action="#" method="POST">
 
@@ -75,8 +122,8 @@ if (isset($_POST['submit'])) {
 
 </form>
     <?php
-    /*$content = ob_get_clean();
-    require("template.php");*/
+    $content = ob_get_clean();
+    require("template_login.php");
     ?>
 
 

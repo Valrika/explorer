@@ -1,9 +1,9 @@
 <?php
 
-require_once '../views/functions/authen.php';
-forcer_utilisateur_connecte();
+//require_once '../views/functions/authen.php';
+//forcer_utilisateur_connecte();
 
-include_once '../upload/delete.php';
+//include_once '../upload/delete.php';
 
 use App\Connection;
 $pdo = (new Connection())->getPdo();
@@ -11,7 +11,7 @@ $pdo = (new Connection())->getPdo();
 
 
 //ajouter non de l'utilisateur
-$title = "Bienvenue";
+//$title = "Bienvenue";
 
 
 
@@ -90,9 +90,9 @@ $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
         </div>
         <ul>
 
-            <?php if (est_connecte()): ?>
+            <?php //if (est_connecte()): ?>
                 <a class="nav-link nav-item" href="/logout">Déconnexion</a>
-            <?php endif; ?>
+            <?php //endif; ?>
         </ul>
         <form class="nav-item form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="search">
@@ -115,3 +115,5 @@ $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
 
 
 <?php
+
+?>
