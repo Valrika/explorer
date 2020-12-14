@@ -1,8 +1,14 @@
-
-
 <?php
 
-include_once '../upload/file_upload.php'
+    include_once '../upload/file_upload.php';
+
+    use App\Connection;
+
+    $pdo = (new Connection())->getPdo();
+
+    $title = "Fichier";
+
+    ob_start();
 
 ?>
 
@@ -15,10 +21,16 @@ include_once '../upload/file_upload.php'
 <br>
 <br>
 
-<form method='post' action='' enctype='multipart/form-data'>
+<form method='post' action='' enctype='multipart/form-data' class="form-group col-md-6">
     <input type='file' name='files[]' multiple />
     <input type='submit' value='Submit' name='submit' />
 </form>
 
 <br>
 <br>
+
+
+<?php
+    $content = ob_get_clean();
+    require("template.php");
+?>

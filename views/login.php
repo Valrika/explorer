@@ -58,28 +58,33 @@ if (isset($_POST['submit'])) {
 }*/
 ?>
 <?php if ($erreur): ?>
-    <div class="alert alert-danger">
+    <div class="">
         <?=$erreur?>
     </div>
 <?php endif; ?>
 
 <form action="#" method="POST">
 
+    <div class="form-group col-md-6">
         <label for="username">Nom d'utilisateur</label>
         <input type="text" name="username" class="Name" placeholder="nom d'utilisateur">
+    </div>
 
-
+    <div class="form-group col-md-6">
         <label for="password">Mot de passe</label>
         <input type="password" name="password" class="Address" placeholder="mot de passe">
+    </div>
 
+    <div class="form-group col-md-6">
         <button class="btn btn-info btn-margin" type="submit" value="Add" name="submit">Envoyer</button>
+    </div>
 
 </form>
-    <?php
+
+<?php
     $content = ob_get_clean();
     require("template_login.php");
-
-    ?>
+?>
 
 
 

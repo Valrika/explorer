@@ -23,6 +23,7 @@ ajouter des fondus sur chaque changement de page sans que le template ne bouge
 
 .container {
     margin-top: 10rem !important;
+    margin-left: 30rem !important;
 }
 
 body {
