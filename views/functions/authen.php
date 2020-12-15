@@ -1,5 +1,6 @@
     <?php
     //PAGE EN LIAISON AVEC LOGIN.PHP
+use App\Connection;
 
     function est_connecte ():bool {
         if (session_status() === PHP_SESSION_NONE) {
@@ -7,6 +8,7 @@
         }
             return !empty($_SESSION['connecte']);
         }
+
 
 
 
@@ -19,3 +21,6 @@
 
         }
     }
+
+
+

@@ -1,5 +1,5 @@
 <?php
-include_once '../views/home_admin.php';
+require_once '../views/home_admin.php';
 
 use App\Connection;
 $pdo = (new \App\Connection())->getPdo();
@@ -16,8 +16,8 @@ if (isset($_GET['id'])) {
     {
         echo 'Votre fichier a été supprimé avec succès';
 
-//Redirection vers la page home_admin
-        header("Location:/home_admin");
+        exit();
+
     }
 }
 

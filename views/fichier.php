@@ -1,5 +1,5 @@
 <?php
-
+// MISE EN PAGE POUR LE FORMULAIRE UPLOAD DE FICHIERS
     include_once '../upload/file_upload.php';
 
     use App\Connection;

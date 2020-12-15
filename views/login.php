@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
         session_start();
         $_SESSION['connecte']=1;
         header('Location: /home_admin');
+
     } else {
         $erreur='Identifiants incorrectes ';
     }

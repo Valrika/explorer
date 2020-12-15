@@ -1,17 +1,24 @@
 <?php
 
 require_once '../views/functions/authen.php';
+
 forcer_utilisateur_connecte();
 
-//include_once '../upload/delete.php';
+include_once '../upload/delete.php';
 
 use App\Connection;
+use App\Model\User;
 $pdo = (new Connection())->getPdo();
+$title = "coucou";
+$erreur = "";
+
+//ob_start();
+//$role = $_SESSION['username']['id_role'];
 
 
 
 //ajouter non de l'utilisateur
-//$title = "Bienvenue";
+$title = "Bienvenue";
 
 
 
@@ -36,37 +43,60 @@ $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
 <!DOCTYPE html>
 <html lang="fr">
 <script src="https://kit.fontawesome.com/31cfd28a45.js" crossorigin="anonymous"></script>
+<br>
+<br>
 <div class="content-read">
+   <?php
+   if (isset($_SESSION['username'])) {
+       echo "Bonjour ".$_SESSION['username']['username']." (deconnexion)";
+   }
+
+
+    ?>
     <h2>Tous vos fichiers</h2>
-    <a href="/fichier" class="create-contact">Ajouter un fichier</a>
-    <table>
+
+<br>
+  <br>
+
+
+
+    <div class="table_home">
+
+        <table class="table">
         <thead>
         <tr>
-            <td>id</td>
-            <td>name</td>
-            <td>file</td>
-            <td>Created</td>
-            <td></td>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">file</td>
+            <th scope="col">Created</td>
+            <th scope="col">Action</td>
         </tr>
         </thead>
         <tbody>
+
         <?php foreach ($files as $file): ?>
-            <tr>
+
+            <tr scope="row">
                 <td><?=$file['id']?></td>
                 <td><?=$file['name']?></td>
                 <td><?=$file['file']?></td>
                 <td><?=$file['created']?></td>
-                <td class="actions">
-                    <!-- icones update et delete avec java script plus lien -->
-                    <a href=../images/love.jpg"<i class="fa fa-file-image-o" aria-hidden="true"></i></a><a href="/update?id=<?=$file['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
+                <td align="center" class="actions">
+
+                    <!-- icones update, print et delete avec fontawsome -->
+
+                    <a href="/update?id=<?=$file['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
                     <a href="/delete?id=<?=$file['id']?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
                     <a href="/print?id=<?=$file['id']?>" class="trash"><i class="fa fa-print" aria-hidden="true"></i></a>
+
+
                 </td>
             </tr>
         <?php endforeach; ?>
         </tbody>
     </table>
-    <!-- Mise en page des données sur le template -->
+
+    <!-- Mise en page des données sur le template à savoir noumbre de fichiers par page -->
     <div class="pagination">
         <?php if ($page > 1): ?>
             <a href="/home_admin?page=<?=$page-1?>"><i class="fas fa-angle-double-left fa-sm"></i></a>
@@ -80,7 +110,7 @@ $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
 
 </html>
 
-    <div class="opacite">
+    <div class="">
 
     <nav class="nav nav-pills nav-fill fixed-top bg-th1-1">
         <div>
@@ -90,30 +120,25 @@ $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
         </div>
         <ul>
 
-            <?php //if (est_connecte()): ?>
+            <?php if (est_connecte()): ?>
                 <a class="nav-link nav-item" href="/logout">Déconnexion</a>
-            <?php //endif; ?>
+            <?php endif; ?>
         </ul>
         <form class="nav-item form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="search">
         </form>
     </nav>
 
-    <div class="wrapper active">
-        <div class="sidebar-wrapper">
-            <ul class="sidebar-nav sidebar_menu">
-                <li class="sidebar-brand"><a href="#">Menu</a></li>
-            </ul>
-            <ul class="sidebar-nav sidebar" >
-                <li><a href="#">Utilisateur</a></li>
-                <li><a href="/documents">Documents</a></li>
-                <li><a href="#">Partage</a></li>
-            </ul>
-        </div>
-    </div>
 
+
+    <br>
+    <br>
+<!--renvoie vers le fichier 'fichier.php' qui require le fichier 'file_upload.php' -->
+    <a href="/fichier" class="create-contact">Ajouter un fichier</a>
 
 
 <?php
+//$content = ob_get_clean();
+//require("template_login.php");
 
 ?>

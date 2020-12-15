@@ -24,8 +24,21 @@
   <component name="ChangeListManager">
     <list default="true" id="68c42178-7d07-4310-93a3-e8b08c2322b7" name="Default Changelist" comment="-m &quot;maj home_admin, login, logout.php new authen.php&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/file_upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload/file_upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/functions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/upload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/confirm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/documents.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fichier.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/fichier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/file_up.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/functions/auth_inscription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/functions/authen.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/functions/authen.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home_admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login_success.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,11 +107,11 @@
       <recent name="C:\Users\acs\Desktop\explorer\assets\icon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\acs\Desktop\explorer\src" />
       <recent name="C:\Users\acs\Desktop\explorer\views\functions" />
       <recent name="C:\Users\acs\Desktop\explorer\views" />
       <recent name="C:\Users\acs\Desktop\explorer\upload" />
       <recent name="C:\Users\acs\Desktop\explorer" />
-      <recent name="C:\Users\acs\Desktop\explorer\public\assets\icon" />
     </key>
   </component>
   <component name="RunManager">
@@ -161,7 +174,8 @@
       <workItem from="1607588561938" duration="11480000" />
       <workItem from="1607679888005" duration="5441000" />
       <workItem from="1607696565595" duration="4364000" />
-      <workItem from="1607936095598" duration="17477000" />
+      <workItem from="1607936095598" duration="29382000" />
+      <workItem from="1608038453952" duration="9602000" />
     </task>
     <task id="LOCAL-00001" summary="-m &quot;changes&quot;">
       <created>1605283894497</created>
@@ -261,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607955058173</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="-m &quot;maj home_admin, login, logout.php new authen.php&quot;">
+      <created>1607962138458</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1607962138458</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
