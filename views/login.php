@@ -23,7 +23,10 @@ if (isset($_POST['submit'])) {
         $sth->execute(['username'=>$username, 'password'=>$password]);
         $result=$sth->fetch();
         session_start();
-        $_SESSION['connecte']=1;
+        // Permet de vérifier que la session est bien ouverte et que nous avons bien un utilisateur
+        $_SESSION['connecte'] = 1;
+        //Récupération du $username pour noptre session en lien avec DataLogin
+        $_SESSION['username'] = "$username";
         header('Location: /home_admin');
 
     } else {

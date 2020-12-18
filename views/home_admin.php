@@ -8,6 +8,14 @@ include_once '../upload/delete.php';
 
 use App\Connection;
 use App\Model\User;
+use App\DataLogin;
+
+
+$user = new DataLogin();
+
+$role = $user->getUsers()['role_id'];
+
+
 $pdo = (new Connection())->getPdo();
 $title = "coucou";
 $erreur = "";
@@ -46,9 +54,11 @@ $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
 <br>
 <br>
 <div class="content-read">
+    <!--Condition qui permet l'affichage du username du user si celui si est connecté-->
    <?php
    if (isset($_SESSION['username'])) {
-       echo "Bonjour ".$_SESSION['username']['username']." (deconnexion)";
+       // Accueil personnalisé quand le user arrive sur la page
+       echo "Bonjour ".$_SESSION['username'];
    }
 
 
@@ -85,18 +95,22 @@ $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
 
                     <!-- icones update, print et delete avec fontawsome -->
 
-                    <a href="/update?id=<?=$file['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
-                    <a href="/delete?id=<?=$file['id']?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
-                    <a href="/print?id=<?=$file['id']?>" class="trash"><i class="fa fa-print" aria-hidden="true"></i></a>
+                    <!-- Authorisation - Condition qui permet l'accès au boton de modif sur le fichier par l'admin
+                    le user n'y a pas accès-->
+                    <?php if ($role === "1"): ?>
+                        <a href="/update?id=<?=$file['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
+                        <a href="/delete?id=<?=$file['id']?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
+                        <a href="/print?id=<?=$file['id']?>" class="trash"><i class="fa fa-print" aria-hidden="true"></i></a>
+                    <?php endif ?>
 
 
                 </td>
             </tr>
-        <?php endforeach; ?>
+        <?php endforeach ?>
         </tbody>
     </table>
 
-    <!-- Mise en page des données sur le template à savoir noumbre de fichiers par page -->
+    <!-- Mise en page des données sur le template à savoir nombre de fichiers par page -->
     <div class="pagination">
         <?php if ($page > 1): ?>
             <a href="/home_admin?page=<?=$page-1?>"><i class="fas fa-angle-double-left fa-sm"></i></a>
@@ -119,10 +133,9 @@ $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
             </svg>
         </div>
         <ul>
-
-            <?php if (est_connecte()): ?>
-                <a class="nav-link nav-item" href="/logout">Déconnexion</a>
-            <?php endif; ?>
+        <?php if ($user->getUsers()): ?>
+            <a class="nav-link nav-item" href="/logout">Déconnexion</a>
+        <?php endif; ?>
         </ul>
         <form class="nav-item form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="search">
@@ -138,7 +151,7 @@ $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
 
 
 <?php
-//$content = ob_get_clean();
-//require("template_login.php");
+$content = ob_get_clean();
+require("template.php");
 
 ?>
