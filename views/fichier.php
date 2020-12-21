@@ -6,7 +6,7 @@
 
     $pdo = (new Connection())->getPdo();
 
-    $title = "Fichier";
+    $title = "Importer un fichier";
 
     ob_start();
 

@@ -4,9 +4,14 @@ use App\Connection;
 
 $pdo = (new Connection())->getPdo();
 
+//Rien ne s'affiche dans je require template mais le template s'affiche quand même
+//est-ce que c'est parce header location en bas ???
+//$title = "Ajouter un fichier";
+//ob_start();
+
 if(isset($_POST['submit'])) {
 
-// Compter le nombre total de fichier avec count (fonction qui retourne le nombre d'éléments dans un tableau)
+// Compter le nombre total de fichiers avec count (fonction qui retourne le nombre d'éléments dans un tableau)
     // $_FILES est une Variable de téléchargement de fichier (superglobale)
     $countfiles=count($_FILES['files']['name']);
 
@@ -15,7 +20,7 @@ if(isset($_POST['submit'])) {
 
     $statement = $pdo->prepare($query);
 
-    // Faire un boucle
+    // Faire une boucle
     for($i=0;$i<$countfiles;$i++){
 
         // Le nom du fichier
@@ -52,3 +57,7 @@ if(isset($_POST['submit'])) {
 
 
 }
+
+
+//$content = ob_get_clean();
+//require("../views/template.php");

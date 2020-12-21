@@ -1,7 +1,8 @@
 <?php
+
 //Connexion à la bdd
 use App\Connection;
-//
+
 $pdo = (new Connection())->getPdo();
 
 $title = "mon site";
@@ -11,7 +12,7 @@ $password = "";
 
 $title="Explorateur de fichier Valrika";
 
-//1er Condition, l'utilisateur a remplie les champs
+//Première condition, l'utilisateur a rempli les champs
 if (!empty($_POST)){
     //on définie une variable erreur qui sera un array dans lequel seront stockées toutes les erreurs
     $errors = array();
@@ -52,7 +53,7 @@ if (!empty($_POST)){
                 //Si ça n'est pas le cas = message d'erreur
                 $errors['password'];
             }
-            //PAS D'ERREUR : L'utilisateur à rempli tous les champs et tout est conforme
+            //PAS D'ERREUR : L'utilisateur a rempli tous les champs et que tout est conforme
             if (empty($errors)) {
                 //ENREGISTREMENT de l'utilisateur dans la BDD
                 $sql=$pdo->prepare("INSERT INTO user SET username = ?, password = ?, email = ?");
