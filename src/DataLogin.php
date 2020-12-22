@@ -3,7 +3,7 @@
 
 namespace App;
 
-
+//TODO chercher extends
 class DataLogin extends  Connection {
 //Function qui permet la récupération des infos du user pour pouvoir les utiliser dans la session
     public function getUsers() {

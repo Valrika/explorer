@@ -1,6 +1,5 @@
 <?php
 
-    //Connexion à la bdd
     use App\Connection;
 
     $pdo = (new Connection())->getPdo();
@@ -8,7 +7,9 @@
     $title = "mon site";
     ob_start();
     session_start();
-    $password = "";
+
+    //pour code commenté : lien de confirmation email
+    //$password = "";
 
     $title="Explorateur de fichier Valrika";
 

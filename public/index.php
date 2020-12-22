@@ -1,19 +1,25 @@
 <?php require '../vendor/autoload.php';
 
+//composers
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
+
+//App dans connection
 use App\Connection;
 
+//Met la connexion getPdo dans une variable
 $pdo = (new Connection())->getPdo();
 
+//Composer pour les routes
 $router = new AltoRouter();
 
-
-
+// ?
 $whoops = new Run;
 $whoops->pushHandler(new PrettyPageHandler);
 $whoops->register();
 
+
+//Définit une route avec syntaxe Altorouter
 $router->map('GET|POST', '/home', function () {
     require __DIR__ . '/../views/home.php';
 });
@@ -33,9 +39,6 @@ $router->map('GET|POST', '/functions', function () {
     require __DIR__ . '/../views/functions/auth.php';
 });
 
-$router->map('GET|POST', '/home_user', function () {
-    require __DIR__ . '/../views/home_user.php';
-});
 /*/$router->map('GET|POST', '/functions', function () {
     require __DIR__ . '/../src/functions.php';
 });*/
@@ -107,7 +110,7 @@ $router->map('GET|POST', '/authen', function () {
 });
 
 
-
+//match = les fonctionnalités dans Altorouter map ou match TODO
 $match=$router->match();
 
 if( is_array($match) && is_callable( $match['target'] ) ) {
@@ -116,3 +119,4 @@ if( is_array($match) && is_callable( $match['target'] ) ) {
 // no route was matched
     header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
 }
+//header = redirection vers une page, todo pourquoi server et à quoi correspond server protocol ?

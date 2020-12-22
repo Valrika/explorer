@@ -24,18 +24,18 @@ ajouter des fondus sur chaque changement de page sans que le template ne bouge
 body {
     background-image: url(../img/storage.jpg);
     background-attachment: fixed;
-
 }
 
 /*contenu du body*/
 .container {
     margin-top: 10rem !important;
-    margin-left: 30rem !important;
+    margin-left: 25rem !important;
 }
 
 /*image de fond*/
 .opacite {
     background-color: #FFFFFF99;
+    /*todo vh*/
     min-height: 100vh;
     min-width: 100vw;
 }
@@ -45,7 +45,6 @@ body {
 .navbar {
     color: #247e6d !important;
     height: 6rem !important;
-
 }
 
 .navbar-brand, a {
@@ -65,11 +64,7 @@ body {
     font-size: 1.1rem;
 }
 
-.sidebar-nav {
-    list-style: none;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
+/*Menu*/
 
 .sidebar-wrapper {
     width: 14rem;
@@ -77,10 +72,19 @@ body {
     position: fixed;
     height: 100%;
     transition: all .4s ease 0s;
+    /*z-index permet de définir quel élément passe en priorité par dessus les autres*/
+    /*1 le plus important*/
     z-index: 3;
     padding-top: 5rem
 }
 
+.sidebar-nav {
+    list-style: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*Pour le menu*/
 .sidebar-brand {
     height: 1rem;
 }
@@ -92,7 +96,6 @@ body {
     border-top: 0.1rem solid #16262b;
     border-bottom: 0.1rem solid #080d11;
     transition: background-color 1.5s;
-
 }
 
 .sidebar-nav li {
@@ -126,6 +129,7 @@ input {
 {
     color: #247e6d;
 }
+
 
 /*theme1 https://coolors.co/0c1618-004643-faf4d3-d1ac00-f6be9a*/
 .bg-th1-1 {

@@ -1,5 +1,6 @@
 <?php
 
+//renommer en documents ?
     require_once '../views/functions/authen.php';
 
     forcer_utilisateur_connecte();
@@ -14,17 +15,17 @@
 
     $user = new DataLogin();
 
+    //TODO Instancie la fonction getUser ?
     $role = $user->getUsers()['role_id'];
 
     $pdo = (new Connection())->getPdo();
-
-    $erreur = "";
 
     $title = "Bienvenue";
     ob_start();
 
     // Récupérer la page via la requête GET (URL param: page), if non exists default the page to 1
 
+    //TODO comprendre ça
     $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 
     // Définir le nombre de fichiers enregistrés sur une page
@@ -41,7 +42,7 @@
     $num_files = $pdo->query('SELECT COUNT(*) FROM fileup')->fetchColumn();
 ?>
 
-
+    <!--Sert à l'affichage de quelque chose, code CSS, ici on intègre fontawsome pour les icônes plus bas-->
     <script src="https://kit.fontawesome.com/31cfd28a45.js" crossorigin="anonymous"></script>
 
 
@@ -94,7 +95,8 @@
                 </tbody>
             </table>
 
-        <!-- Mise en page des données sur le template à savoir nombre de fichiers par page -->
+        <!-- Mise en page des données sur le template à savoir nombre de fichiers par page
+         balise i = texte ou contenu mis à part dans du texte-->
             <div class="pagination">
                 <?php if ($page > 1): ?>
                     <a href="/home_admin?page=<?=$page-1?>"><i class="fas fa-angle-double-left fa-sm"></i></a>
@@ -104,11 +106,6 @@
                 <?php endif; ?>
             </div>
         </div>
-
-        <!--TODO supprimer ce déconnexion doublon avec navbar ??-->
-            <?php if ($user->getUsers()): ?>
-                <a class="nav-link nav-item" href="/logout">Déconnexion</a>
-            <?php endif; ?>
 
     <!--renvoie vers le fichier 'fichier.php' qui require le fichier 'file_upload.php' -->
         <a href="/fichier" class="create-contact">Ajouter un fichier</a>
