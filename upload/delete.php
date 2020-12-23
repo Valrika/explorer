@@ -1,6 +1,6 @@
 <?php
 
-    require_once '../views/home_admin.php';
+    require_once '../views/user_space.php';
 
     use App\Connection;
     $pdo = (new \App\Connection())->getPdo();

@@ -3,7 +3,7 @@
     use App\Connection;
     $pdo = (new Connection())->getPdo();
     $result = "";
-    $title = "coucou";
+    $title = "Se connecter";
     $erreur = "";
 
     ob_start();
@@ -44,7 +44,7 @@
             $_SESSION['id']=$result['id'];
             if ($role_id== 1){
 
-                header('Location: /home_admin');
+                header('Location: /user_space');
             }
             elseif ($role_id = 2){
                 header('location: /home_user');
@@ -69,6 +69,10 @@
 <?php endif; ?>
 
 <form action="#" method="POST">
+
+    <div class="form-group col-md-6">
+        <h1>Se connecter</h1>
+    </div>
 
     <div class="form-group col-md-6">
         <label for="username">Nom d'utilisateur</label>

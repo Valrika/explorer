@@ -90,7 +90,7 @@ $router->map('GET|POST', '/essais', function () {
 });
 
 $router->map('GET|POST', '/home_admin', function () {
-    require __DIR__ . '/../views/home_admin.php';
+    require __DIR__ . '/../views/user_space.php';
 });
 
 $router->map('GET|POST', '/create', function () {

@@ -12,9 +12,6 @@
 fichier css bootstrap + ajouts personnels
 
 texte recherche en couleur
-changer couleur des liens
-ne pas souligner les liens, seulement hover
-ajouter les icones
 ajouter des fondus sur chaque changement de page sans que le template ne bouge
 */
 
@@ -27,17 +24,17 @@ body {
 }
 
 /*contenu du body*/
-.container {
-    margin-top: 10rem !important;
-    margin-left: 25rem !important;
+.container-fluid {
+    margin-top: 5rem!important;
+    margin-left: 20rem!important;
+    max-width: 70rem!important; /*évite que le contenu déborde à droite*/
 }
 
 /*image de fond*/
 .opacite {
     background-color: #FFFFFF99;
-    /*todo vh*/
-    min-height: 100vh;
-    min-width: 100vw;
+    min-height: 100vh; /*100/100e de la hauteur du viewport*/
+    min-width: 100vw; /*100/100e de la largeur du viewport*/
 }
 
 /*Navbar*/
@@ -45,6 +42,13 @@ body {
 .navbar {
     color: #247e6d !important;
     height: 6rem !important;
+    position: sticky !important;
+    z-index: 3 !important;
+    overflow-x: hidden !important;
+}
+
+.nav-item {
+    text-align: center!important;
 }
 
 .navbar-brand, a {
@@ -56,12 +60,23 @@ body {
     color: #247e6d !important;
 }
 
+.avatar {
+    color: #3b9840;
+}
+
 /*Sidebar*/
 
 .wrapper {
-    height: 100%;
+    /*z-index permet de définir quel élément passe en priorité par dessus les autres
+    nécessite position pour fonctionner
+    1 = le moins important
+    */
     position: fixed;
+    z-index: 1;
+    height: 100%;
     font-size: 1.1rem;
+    top: 2rem;
+    left: 0rem;
 }
 
 /*Menu*/
@@ -69,13 +84,9 @@ body {
 .sidebar-wrapper {
     width: 14rem;
     background: #011618;
-    position: fixed;
     height: 100%;
     transition: all .4s ease 0s;
-    /*z-index permet de définir quel élément passe en priorité par dessus les autres*/
-    /*1 le plus important*/
-    z-index: 3;
-    padding-top: 5rem
+    padding-top: 5rem;
 }
 
 .sidebar-nav {
@@ -108,12 +119,29 @@ body {
 }
 
 h1 {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 600;
     text-shadow:0 1px 4px rgba(0,0,0,.2);
-    text-align:center;
-    margin-top: 8rem;
-    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow:0 1px 4px rgba(0,0,0,.2);
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow:0 1px 4px rgba(0,0,0,.2);
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 input {
@@ -128,6 +156,15 @@ input {
 .placeholder
 {
     color: #247e6d;
+}
+
+.seeme {
+    color: #27662a !important;
+}
+
+.seeme2 {
+    color: #b06a00 !important;
+
 }
 
 
