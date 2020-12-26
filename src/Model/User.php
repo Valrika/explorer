@@ -13,6 +13,7 @@ class User {
     /**
      * @var  string
      */
+
     private $username;
 
     /**
@@ -30,6 +31,7 @@ class User {
         return $this->username;
     }
 
+    // change username de private, self -> se réfère à la classe, this -> se réfère à l'objet
     public function setUsername(string $username): self
     {
         $this->username = $username;

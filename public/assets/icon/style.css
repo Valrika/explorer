@@ -28,6 +28,7 @@ body {
     margin-top: 5rem!important;
     margin-left: 20rem!important;
     max-width: 70rem!important; /*évite que le contenu déborde à droite*/
+
 }
 
 /*image de fond*/
@@ -159,14 +160,17 @@ input {
 }
 
 .seeme {
-    color: #27662a !important;
+    color: #698c6b !important;
 }
 
 .seeme2 {
-    color: #b06a00 !important;
+    color: #b8a89e !important;
 
 }
 
+.navbar-toggler-icon {
+    color: #d1ac00!important;
+}
 
 /*theme1 https://coolors.co/0c1618-004643-faf4d3-d1ac00-f6be9a*/
 .bg-th1-1 {
