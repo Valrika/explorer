@@ -6,7 +6,7 @@
     $pdo = (new \App\Connection())->getPdo();
     $msg = '';
 
-    //TODO id = id du fichier dans l'url ?
+    //id = id passé à l'url
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
 

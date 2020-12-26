@@ -8,7 +8,7 @@ $msg='';
 // Vérifification le fichier a bien un ID ? Par ex update.php?id=1 va mettre à jour le fichier dont qui a pour ID  1
 if (isset($_GET['id'])) {
     if (!empty($_POST)) {
-        //utilisation de l'opérateur ternaire  qui permet de retourner 1 valeur parmi 2 valeurs e fonction de la condition
+        //utilisation de l'opérateur ternaire  qui permet de retourner 1 valeur parmi 2 valeurs en fonction de la condition
         //Pour plus d'info http://www.finalclap.com/faq/102-php-operateur-ternaire
         $id=isset($_POST['id']) ? $_POST['id'] : NULL;
         $name=isset($_POST['name']) ? $_POST['name'] : '';

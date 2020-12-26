@@ -25,13 +25,13 @@ if(isset($_POST['submit'])) {
         $target_file = 'Files/'.$filename;
 
         // file extension
-        // path_info est une fonction qui retourne des infos sur le path (chemin), sous forme de chaine ou de tableau associatif
+        // path_info est une fonction qui retourne des infos sur le path (chemin), sous forme de chaîne ou de tableau associatif
         $file_extension = pathinfo($target_file, PATHINFO_EXTENSION);
-        //strtolower est une fonction qui renvoie une chaine de caractère en minuscule
+        //strtolower est une fonction qui renvoie une chaîne de caractères en minuscules
         $file_extension = strtolower($file_extension);
 
         // Vérifier que l'extension du fichier est bien valide
-        $valid_extension = array("png","jpeg","jpg",'pdf', 'docx');
+        $valid_extension = array("png","jpeg","jpg","pdf", "docx", "txt");
         // Si les 2 conditions sont remplies à savoir le chemin et l'extension du fichier sont correctes
         if(in_array($file_extension, $valid_extension)){
 

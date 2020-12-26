@@ -16,7 +16,9 @@
     $user = new DataLogin();
 
 
-    //TODO Instancie la fonction getUser ?
+    // instancie l'objet $role à partir du modèle de la fonction getUser dans la class DataLogin
+    // et récupère le contenu de la colonne "role_id" de l'utilisateur demandé pour le mettre dans $role
+
     $role = $user->getUsers()['role_id'];
 
     $pdo = (new Connection())->getPdo();
@@ -27,6 +29,9 @@
     // Récupérer la page via la requête GET (URL param: page), if non exists default the page to 1
 
     //TODO comprendre ça
+    // is_numeric() = détermine si une variable est un nombre ou une chaîne numérique
+    // ? = opérateur ternaire ?
+    // d'où sort "page ?"
     $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 
     // Définir le nombre de fichiers enregistrés sur une page

@@ -3,7 +3,9 @@
 
 namespace App;
 
-//TODO chercher extends
+// extends = la classe DataLogin est une classe fille de Connection
+// C'est à dire que DataLogin hérite de toutes les méthodes publiques et privées de la classe parente Connection
+
 class DataLogin extends  Connection {
 //Function qui permet la récupération des infos du user pour pouvoir les utiliser dans la session
     public function getUsers() {

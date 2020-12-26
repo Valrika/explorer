@@ -92,7 +92,7 @@
 
 <?php
     $content = ob_get_clean();
-    require("template_login.php");
+    require("template.php");
 ?>
 
 
