@@ -1,0 +1,68 @@
+LEXIQUE
+
+Lexique avec définitions pour rappel.
+
+CLASSE : objet composé d'un ensemble d'objets d'un certain type (exemple classe maison, objet maison de Jules, maison de Marie...)
+PDO = une classe
+
+--> ATTRIBUT = variable dans une classe
+--> METHODE = fonction dans une classe
+
+
+COMPILE (langage) : langage qui, avant de pouvoir l'exécuter, traduit en langage machine (binaire) par un compilateur (voir INTERPRETE)
+
+COMPILATEUR : programme informatique qui traduit l’ensemble du code source d’un projet logiciel en code machine avant son exécution. 
+Après cette traduction le projet sera exécuté par le processeur qui dispose de toutes les instructions sous forme de code machine avant le début du projet.
+Il existe des compilateurs à la volée (entre l'interpréteur et le compilateur).
+
+
+ENCAPSULATION : on agit sur un élément privé par le biais d'un élément public (permet de limiter/contrôler la modification de l'élément privé)
+
+
+FONCTION : suite d’instructions cohérentes auxquelles on donne un nom. On utilise ensuite ce nom pour exécuter toutes les instructions contenues dans le corps de la fonction
+fonction/variable PUBLIQUE : on ne peut appeler que les éléments publics de la classe
+
+--> fonction/variable PRIVEE : élement de classe ne pouvant être modifié, ne peut être appelée que par d'autres fonctions dans la même classe
+--> fonction/variable PROTECTED : on peut l'appeler comme une classe publique mais pas la modifier
+
+
+HERITAGE : mécanisme qui permet, lors de la déclaration d’une nouvelle classe, d'y inclure les caractéristiques d’une autre classe (exemple classe 1 hérite de classe 2, enfant hérite de humain).
+
+
+INTERPRETE (langage) : langage traduit au fur et à mesure de l'exécution par l'interpreteur (cf COMPILER)
+
+INTERPRETEUR : programme informatique qui traite le code source d’un projet logiciel pendant son fonctionnement 
+– c’est-à-dire pendant son exécution – et joue le rôle d’interface entre le projet et le processeur. 
+
+
+LIBRAIRIE
+Recueil de code (souvent des fonctions et des classes) qui permettent au programmeur d’utiliser des fonctionnalités prédéfinies.
+Les libraries sont appellés par le programmeur (et les framework appellent le code du programmeur)
+
+
+MASQUE : Un masque est une succession binaire destinée à indiquer la position des bits concernés par une opération.  
+Sélectionne dans un groupe de bits un sous-ensemble de bits à conserver, les autres sont forcés à une valeur choisie.
+Un 1 dans le masque indique que le bit est concerné, un 0 qu’il ne l’est pas. On peut aussi utiliser le « masque inversé » pour certaines opérations comme la mise à 0 d’un bit.
+Le masque s’exprime en général sous la forme d’une constante hexadécimale (0xF0, 0x03, 0x40...) ou peut être fabriqué par décalage s’il concerne un seul bit (1<<6, ~(1<<n)).
+Les opérateurs de bits sont souvent employés avec la notion de masque.
+
+
+OBJET : ensemble de variables et fonctions regroupées au même endroit. Instance d'une classe.
+
+
+PROXY :
+Composant logiciel informatique qui joue le rôle d'intermédiaire en se plaçant entre deux hôtes pour faciliter ou surveiller leurs échanges.
+En réseaux, un proxy est alors un programme servant d'intermédiaire pour accéder à un autre réseau, généralement Internet. 
+Par extension, on appelle aussi « proxy » un matériel comme un serveur mis en place pour assurer le fonctionnement de tels services.
+
+PROXY INVERSE (reverse proxy) :
+type de serveur, habituellement placé en frontal de serveurs web. 
+Contrairement au serveur proxy qui permet à un utilisateur d'accéder au réseau Internet, le proxy inverse permet à un utilisateur d'Internet d'accéder à des serveurs internes. 
+Une des applications courantes du proxy inverse est la répartition de charge (load-balancing).
+
+
+SOLARIS : système d'exploitation unix
+
+
+
+
